@@ -1,0 +1,3 @@
+[submodule "themes/geeky"]
+	path = themes/geeky
+	url = https://github.com/statichunt/geeky-hugo.git
