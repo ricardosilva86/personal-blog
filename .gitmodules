@@ -1,3 +1,6 @@
 [submodule "themes/geeky"]
 	path = themes/geeky
 	url = https://github.com/statichunt/geeky-hugo.git
+[submodule "themes/tailwind"]
+	path = themes/tailwind
+	url = https://github.com/tomowang/hugo-theme-tailwind.git
