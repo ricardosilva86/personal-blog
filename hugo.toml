@@ -1,10 +1,17 @@
 baseURL = "https://ricardosilva.xyz/"
-title = "My Personal Blog"
+title = "Blog do Ricardinho"
 author = "Ricardo Silva"
 copyright = "Ricardo Silva"
 pagination.pagerSize = 10
-languageCode = "en"
+languageCode = "pt-br"
+defaultContentLanguage = "pt-br"
+enableInlineShortcodes = true
 theme = "tailwind"
+
+ignoreErrors = ["error-remote-getjson"]
+enableRobotsTXT = true
+enableEmoji = true
+enableGitInfo = true
 
 [markup]
   _merge = "deep"
@@ -15,11 +22,11 @@ theme = "tailwind"
   contentTypeName = "posts"
 
   [params.header]
-    logo = "logo.webp"
-    title = ""
+    logo = "file.svg"
+    title = "Blog do Ricardinho"
 
   [params.footer]
-    since = 2023
+    since = 2025
     poweredby = true
 
 [menu]

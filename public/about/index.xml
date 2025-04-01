@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Abouts on Blog do Ricardinho</title>
+    <link>http://localhost:1313/about/</link>
+    <description>Recent content in Abouts on Blog do Ricardinho</description>
+    <generator>Hugo</generator>
+    <language>pt-br</language>
+    <managingEditor>user@example.com (Hugo Author)</managingEditor>
+    <webMaster>user@example.com (Hugo Author)</webMaster>
+    <copyright>Ricardo Silva</copyright>
+    <lastBuildDate>Sat, 29 Mar 2025 11:01:11 +0100</lastBuildDate>
+    <atom:link href="http://localhost:1313/about/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Sobre</title>
+      <link>http://localhost:1313/about/about/</link>
+      <pubDate>Sat, 29 Mar 2025 11:01:11 +0100</pubDate><author>user@example.com (Hugo Author)</author>
+      <guid>http://localhost:1313/about/about/</guid>
+      <description>&lt;h1 id=&#34;quem-sou-eu&#34;&gt;Quem sou eu&lt;/h1&gt;&#xA;&lt;p&gt;Meu nome é Ricardo Silva, eu sou Platform Engineer na Holanda. Através desse blog eu quero compartilhar conhecimento adquirido durante meus anos de DevOps/Cloud/Platform Engineer nas diversas empresas por onde passei: &lt;code&gt;Porto Seguro&lt;/code&gt;, &lt;code&gt;IBM&lt;/code&gt;, &lt;code&gt;UBS&lt;/code&gt;, &lt;code&gt;ASML&lt;/code&gt;, &lt;code&gt;Mambu&lt;/code&gt; e &lt;code&gt;Dexter Energy&lt;/code&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Meu foco principal será em tecnologias que eu tive contato e acabei usando para resolver problemas de engenharia que encontrei. Especialmente, Google Cloud (sou certificado Cloud Professional), Terraform e Vault (ambos da Hashicorp).&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
