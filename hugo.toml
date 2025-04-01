@@ -38,9 +38,9 @@ enableGitInfo = true
     weight = 10
 
   [[menu.main]]
-    identifier = "about"
-    name = "About"
-    pageRef = "/about"
+    identifier = "sobre"
+    name = "Sobre"
+    pageRef = "/sobre"
     weight = 20
 
 [taxonomies]
