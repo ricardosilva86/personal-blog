@@ -8,6 +8,10 @@ defaultContentLanguage = "pt-br"
 enableInlineShortcodes = true
 theme = "tailwind"
 
+# Multilingual configuration
+defaultContentLanguageInSubdir = true
+disableLanguages = []
+
 ignoreErrors = ["error-remote-getjson"]
 enableRobotsTXT = true
 enableEmoji = true
@@ -29,19 +33,7 @@ enableGitInfo = true
     since = 2025
     poweredby = true
 
-[menu]
-
-  [[menu.main]]
-    identifier = "post"
-    name = "Post"
-    pageRef = "/posts"
-    weight = 10
-
-  [[menu.main]]
-    identifier = "sobre"
-    name = "Sobre"
-    pageRef = "/sobre"
-    weight = 20
+# Menu configuration is now in languages.toml for each language
 
 [taxonomies]
 category = "categories"

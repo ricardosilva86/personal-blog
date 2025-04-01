@@ -1,55 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  <url>
-    <loc>https://ricardosilva.xyz/</loc>
-    <lastmod>2025-03-29T11:01:11+01:00</lastmod>
-  </url><url>
-    <loc>https://ricardosilva.xyz/about/</loc>
-    <lastmod>2025-03-29T11:01:11+01:00</lastmod>
-  </url><url>
-    <loc>https://ricardosilva.xyz/posts/</loc>
-    <lastmod>2025-03-29T00:08:46+01:00</lastmod>
-  </url><url>
-    <loc>https://ricardosilva.xyz/manifest.json</loc>
-  </url><url>
-    <loc>https://ricardosilva.xyz/search/_index.de/</loc>
-    <priority>0.1</priority>
-  </url><url>
-    <loc>https://ricardosilva.xyz/search/_index.en/</loc>
-    <priority>0.1</priority>
-  </url><url>
-    <loc>https://ricardosilva.xyz/search/_index.es/</loc>
-    <priority>0.1</priority>
-  </url><url>
-    <loc>https://ricardosilva.xyz/search/_index.fr/</loc>
-    <priority>0.1</priority>
-  </url><url>
-    <loc>https://ricardosilva.xyz/search/_index.hi/</loc>
-    <priority>0.1</priority>
-  </url><url>
-    <loc>https://ricardosilva.xyz/search/_index.jp/</loc>
-    <priority>0.1</priority>
-  </url><url>
-    <loc>https://ricardosilva.xyz/search/</loc>
-    <priority>0.1</priority>
-  </url><url>
-    <loc>https://ricardosilva.xyz/search/_index.nl/</loc>
-    <priority>0.1</priority>
-  </url><url>
-    <loc>https://ricardosilva.xyz/search/_index.pl/</loc>
-    <priority>0.1</priority>
-  </url><url>
-    <loc>https://ricardosilva.xyz/search/_index.ru/</loc>
-    <priority>0.1</priority>
-  </url><url>
-    <loc>https://ricardosilva.xyz/search/_index.zh-cn/</loc>
-    <priority>0.1</priority>
-  </url><url>
-    <loc>https://ricardosilva.xyz/categories/</loc>
-  </url><url>
-    <loc>https://ricardosilva.xyz/series/</loc>
-  </url><url>
-    <loc>https://ricardosilva.xyz/tags/</loc>
-  </url>
-</urlset>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <sitemap>
+    <loc>http://localhost:65139/pt-br/sitemap.xml</loc>
+    
+      <lastmod>2025-04-01T21:40:25+01:00</lastmod>
+    
+  </sitemap>
+  
+  <sitemap>
+    <loc>http://localhost:65139/en/sitemap.xml</loc>
+    
+  </sitemap>
+  
+</sitemapindex>
