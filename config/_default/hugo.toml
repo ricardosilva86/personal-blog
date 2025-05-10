@@ -1,6 +1,7 @@
 baseURL = "https://ricardosilva.xyz"
 copyright = "Ricardo da Silva"
-# pagination.pagerSize = 3 # for demonstration of pagination
+title = "Blog do Ricardinho"
+pagination.pagerSize = 3 # for demonstration of pagination
 languageCode = "pt-br"
 defaultContentLanguage = "pt-br"
 enableInlineShortcodes = true

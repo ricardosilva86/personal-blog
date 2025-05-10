@@ -15,7 +15,7 @@ showAuthor = true
   email = "ricardo@ricardosilva.xyz"
 
 [header]
-  logo = "logo.svg"
+  logo = "logo.png"
   title = "Blog do Ricardinho"
 
 [footer]
