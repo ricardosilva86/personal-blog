@@ -1,0 +1,34 @@
+title = "Ricardinho's Blog"
+table_of_contents = "Content"
+open_main_menu = "Menu"
+open_lang_switcher = "🌍"
+[reading_time]
+one = "Read: {{ .Count }} times"
+other = "Viewed {{ .Count }} times"
+
+[search]
+title = "Search"
+empty_result = "Nothing found with this term"
+placeholder = "Search..."
+
+[header]
+darkmode_toggle = "Dark theme"
+
+[404]
+go_back_home = "Back to the Homepage"
+sorry = "Sorry 🤷‍♂️"
+page_not_found = "Page Not Found"
+
+[footer]
+powered_by = "Powered by {{ .Generator }} {{ .Heart }} {{ .Theme }}"
+copyright_with_since ="{{ .CopyrightSign }} {{ .SinceYear }} - {{ .CurrentYear}} {{ .Copyright }}"
+copyright_wo_since ="{{ .CopyrightSign }} {{ .CurrentYear}} {{ .Copyright }}"
+
+[paginator]
+newer_posts = "Newer posts"
+older_posts = "Older posts"
+
+[taxonomies]
+categories = "Categories"
+tags = "tags"
+series = "Series"

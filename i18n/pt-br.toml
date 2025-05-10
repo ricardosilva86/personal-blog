@@ -1,0 +1,34 @@
+title = "Blog do Ricardinho"
+table_of_contents = "Conteúdo"
+open_main_menu = "Menu"
+open_lang_switcher = "🌍"
+[reading_time]
+one = "Lido: {{ .Count }} vezes"
+other = "Visto {{ .Count }} vezes"
+
+[search]
+title = "Buscar"
+empty_result = "Não encontramos nada com essa busca"
+placeholder = "Buscar..."
+
+[header]
+darkmode_toggle = "Tema escuro"
+
+[404]
+go_back_home = "Voltar para Homepage"
+sorry = "Mals aí 🤷‍♂️"
+page_not_found = "Página não encontrada"
+
+[footer]
+powered_by = "Powered by {{ .Generator }} {{ .Heart }} {{ .Theme }}"
+copyright_with_since ="{{ .CopyrightSign }} {{ .SinceYear }} - {{ .CurrentYear}} {{ .Copyright }}"
+copyright_wo_since ="{{ .CopyrightSign }} {{ .CurrentYear}} {{ .Copyright }}"
+
+[paginator]
+newer_posts = "Novos posts"
+older_posts = "Posts antigos"
+
+[taxonomies]
+categories = "Categorias"
+tags = "tags"
+series = "Series"
