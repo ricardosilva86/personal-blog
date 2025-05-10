@@ -10,9 +10,9 @@
     weight = 10
 
   [[pt-br.menu.main]]
-    identifier = "about"
+    identifier = "sobre"
     name = "Sobre"
-    pageRef = "about"
+    pageRef = "sobre"
     weight = 20
 [en]
   languageCode = 'en-US'
@@ -30,4 +30,4 @@
     identifier = "about"
     name = "About"
     pageRef = "about"
-    weight = 20
+    weight = 30

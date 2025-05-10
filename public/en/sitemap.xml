@@ -2,65 +2,95 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:65139/en/search/</loc>
+    <loc>http://localhost:1313/en/posts/about/</loc>
+    <lastmod>2025-05-10T13:19:34+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/en/posts/</loc>
+    <lastmod>2025-05-10T13:19:34+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt-br"
+                href="http://localhost:1313/posts/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/en/posts/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/en/</loc>
+    <lastmod>2025-05-10T13:19:34+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt-br"
+                href="http://localhost:1313/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/en/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/en/posts/hello-world/</loc>
+    <lastmod>2025-05-10T13:14:23+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt-br"
+                href="http://localhost:1313/posts/hello-world/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/en/posts/hello-world/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/en/search/</loc>
     <priority>0.1</priority>
     <xhtml:link
                 rel="alternate"
-                hreflang="pt-BR"
-                href="http://localhost:65139/pt-br/search/"
+                hreflang="pt-br"
+                href="http://localhost:1313/search/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="en-US"
-                href="http://localhost:65139/en/search/"
-                />
-  </url><url>
-    <loc>http://localhost:65139/en/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt-BR"
-                href="http://localhost:65139/pt-br/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-US"
-                href="http://localhost:65139/en/"
+                hreflang="en"
+                href="http://localhost:1313/en/search/"
                 />
   </url><url>
-    <loc>http://localhost:65139/en/categories/</loc>
+    <loc>http://localhost:1313/en/categorias/</loc>
     <xhtml:link
                 rel="alternate"
-                hreflang="pt-BR"
-                href="http://localhost:65139/pt-br/categories/"
+                hreflang="pt-br"
+                href="http://localhost:1313/categorias/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="en-US"
-                href="http://localhost:65139/en/categories/"
-                />
-  </url><url>
-    <loc>http://localhost:65139/en/series/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt-BR"
-                href="http://localhost:65139/pt-br/series/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-US"
-                href="http://localhost:65139/en/series/"
+                hreflang="en"
+                href="http://localhost:1313/en/categorias/"
                 />
   </url><url>
-    <loc>http://localhost:65139/en/tags/</loc>
+    <loc>http://localhost:1313/en/series/</loc>
     <xhtml:link
                 rel="alternate"
-                hreflang="pt-BR"
-                href="http://localhost:65139/pt-br/tags/"
+                hreflang="pt-br"
+                href="http://localhost:1313/series/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="en-US"
-                href="http://localhost:65139/en/tags/"
+                hreflang="en"
+                href="http://localhost:1313/en/series/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/en/tags/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt-br"
+                href="http://localhost:1313/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/en/tags/"
                 />
   </url>
 </urlset>

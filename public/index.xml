@@ -9,14 +9,14 @@
     <managingEditor>ricardo@ricardosilva.xyz (Ricardo Silva)</managingEditor>
     <webMaster>ricardo@ricardosilva.xyz (Ricardo Silva)</webMaster>
     <copyright>Ricardo da Silva</copyright>
-    <lastBuildDate>Sat, 10 May 2025 10:35:29 +0200</lastBuildDate>
+    <lastBuildDate>Sat, 10 May 2025 19:14:34 +0200</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Sobre</title>
       <link>http://localhost:1313/posts/sobre/</link>
       <pubDate>Sat, 10 May 2025 10:35:29 +0200</pubDate><author>ricardo@ricardosilva.xyz (Ricardo Silva)</author>
       <guid>http://localhost:1313/posts/sobre/</guid>
-      <description></description>
+      <description>&lt;h1 id=&#34;quem-sou-eu&#34;&gt;Quem sou eu&lt;/h1&gt;&#xA;&lt;p&gt;Olá 👋🏻! meu nome é Ricardo Silva, sou um Platform/DevOps Engineer, morando na Holanda, curto resolver desafios complexos de infraestrutura e automação. Com uma trajetória em empresas de destaque global como &lt;code&gt;ASML&lt;/code&gt;, &lt;code&gt;Mambu&lt;/code&gt;, &lt;code&gt;Dexter Energy&lt;/code&gt;, &lt;code&gt;UBS&lt;/code&gt;, &lt;code&gt;Atos&lt;/code&gt;, &lt;code&gt;IBM&lt;/code&gt; e &lt;code&gt;Porto Seguro&lt;/code&gt;, venho construindo conhecimento em arquiteturas cloud-native e práticas DevOps.&lt;/p&gt;&#xA;&lt;p&gt;Através deste blog, compartilho insights e experiências práticas acumuladas ao longo da minha jornada profissional. Como profissional certificado em Google Cloud Platform e entusiasta das tecnologias da Hashicorp (especialmente Terraform e Vault), meu objetivo é contribuir com conteúdo técnico mais profundo (quanto possível 😁), focando em soluções práticas e boas práticas de engenharia.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Hello World</title>

@@ -1,5 +1,4 @@
 baseURL = "https://ricardosilva.xyz"
-title = "Blog do Ricardinho"
 copyright = "Ricardo da Silva"
 # pagination.pagerSize = 3 # for demonstration of pagination
 languageCode = "pt-br"
