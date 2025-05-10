@@ -3,8 +3,8 @@ table_of_contents = "Content"
 open_main_menu = "Menu"
 open_lang_switcher = "🌍"
 [reading_time]
-one = "Read: {{ .Count }} times"
-other = "Viewed {{ .Count }} times"
+one = "{{ .Count }} minute to read"
+other = "{{ .Count }} minutes to read"
 
 [search]
 title = "Search"

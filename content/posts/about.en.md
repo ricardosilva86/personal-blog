@@ -2,8 +2,9 @@
 date = '2025-05-10T10:35:29+02:00'
 draft = false
 title = 'About'
+button = 'About'
 disableComments=true
-tags = ['hello-world', 'en']
+tags = ['hello-world', 'en', 'about']
 +++
 
 # Who am I
