@@ -30,4 +30,4 @@
     identifier = "about"
     name = "About"
     pageRef = "about"
-    weight = 20
+    weight = 30

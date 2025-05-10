@@ -2,13 +2,28 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blog do Ricardinho</title>
-    <link>http://localhost:65139/en/</link>
+    <link>http://localhost:1313/en/</link>
     <description>Recent content on Blog do Ricardinho</description>
     <generator>Hugo</generator>
-    <language>en-US</language>
-    <managingEditor>user@example.com (Hugo Author)</managingEditor>
-    <webMaster>user@example.com (Hugo Author)</webMaster>
-    <copyright>Ricardo Silva</copyright>
-    <atom:link href="http://localhost:65139/en/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <managingEditor>ricardo@ricardosilva.xyz (Ricardo Silva)</managingEditor>
+    <webMaster>ricardo@ricardosilva.xyz (Ricardo Silva)</webMaster>
+    <copyright>Ricardo da Silva</copyright>
+    <lastBuildDate>Sat, 10 May 2025 13:19:34 +0200</lastBuildDate>
+    <atom:link href="http://localhost:1313/en/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About</title>
+      <link>http://localhost:1313/en/posts/about/</link>
+      <pubDate>Sat, 10 May 2025 10:35:29 +0200</pubDate><author>ricardo@ricardosilva.xyz (Ricardo Silva)</author>
+      <guid>http://localhost:1313/en/posts/about/</guid>
+      <description>&lt;h1 id=&#34;who-am-i&#34;&gt;Who am I&lt;/h1&gt;&#xA;&lt;p&gt;Hello 👋🏻! My name is Ricardo Silva, I am a Platform/DevOps Engineer living in the Netherlands, and I enjoy solving complex infrastructure and automation challenges. With a career in globally renowned companies such as &lt;code&gt;ASML&lt;/code&gt;, &lt;code&gt;Mambu&lt;/code&gt;, &lt;code&gt;Dexter Energy&lt;/code&gt;, &lt;code&gt;UBS&lt;/code&gt;, &lt;code&gt;Atos&lt;/code&gt;, &lt;code&gt;IBM&lt;/code&gt;, and &lt;code&gt;Porto Seguro (BR)&lt;/code&gt;, I have been building expertise in cloud-native architectures and DevOps practices.&lt;/p&gt;&#xA;&lt;p&gt;Through this blog, I share insights and practical experiences accumulated throughout my professional journey. As a Google Cloud Platform-certified professional and an enthusiast of Hashicorp technologies (especially Terraform and Vault), my goal is to contribute with deeper technical content (as much as possible 😁), focusing on practical solutions and engineering best practices.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Hello World</title>
+      <link>http://localhost:1313/en/posts/hello-world/</link>
+      <pubDate>Sat, 29 Mar 2025 00:05:32 +0100</pubDate><author>ricardo@ricardosilva.xyz (Ricardo Silva)</author>
+      <guid>http://localhost:1313/en/posts/hello-world/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>

@@ -2,122 +2,155 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:65139/pt-br/en/about/</loc>
-    <lastmod>2025-03-29T11:01:11+01:00</lastmod>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2025-05-10T13:14:23+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/en/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt-br"
+                href="http://localhost:1313/"
+                />
   </url><url>
-    <loc>http://localhost:65139/pt-br/</loc>
+    <loc>http://localhost:1313/posts/</loc>
+    <lastmod>2025-05-10T13:14:23+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/en/posts/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt-br"
+                href="http://localhost:1313/posts/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/posts/sobre/</loc>
+    <lastmod>2025-05-10T13:14:23+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/en/about/</loc>
+    <lastmod>2025-04-01T22:06:01+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/en/</loc>
+    <lastmod>2025-04-01T22:06:01+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/pt-br/</loc>
+    <lastmod>2025-04-01T22:06:01+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/about/</loc>
     <lastmod>2025-04-01T21:40:25+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en-US"
-                href="http://localhost:65139/en/"
+                hreflang="en"
+                href="http://localhost:1313/en/about/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="pt-BR"
-                href="http://localhost:65139/pt-br/"
+                hreflang="pt-br"
+                href="http://localhost:1313/about/"
                 />
   </url><url>
-    <loc>http://localhost:65139/pt-br/en/</loc>
-    <lastmod>2025-03-29T11:01:11+01:00</lastmod>
+    <loc>http://localhost:1313/pt-br/about/</loc>
+    <lastmod>2025-04-01T22:06:01+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:65139/pt-br/pt-br/</loc>
-    <lastmod>2025-03-29T11:01:11+01:00</lastmod>
+    <loc>http://localhost:1313/en/posts/hello-world/</loc>
+    <lastmod>2025-04-01T22:06:01+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:65139/pt-br/about/</loc>
-    <lastmod>2025-04-01T21:40:25+01:00</lastmod>
-  </url><url>
-    <loc>http://localhost:65139/pt-br/pt-br/about/</loc>
-    <lastmod>2025-03-29T11:01:11+01:00</lastmod>
-  </url><url>
-    <loc>http://localhost:65139/pt-br/en/posts/hello-world/</loc>
-    <lastmod>2025-03-29T00:05:32+01:00</lastmod>
-  </url><url>
-    <loc>http://localhost:65139/pt-br/posts/hello-world/</loc>
-    <lastmod>2025-03-29T00:08:46+01:00</lastmod>
-  </url><url>
-    <loc>http://localhost:65139/pt-br/pt-br/posts/hello-world/</loc>
-    <lastmod>2025-03-29T00:05:32+01:00</lastmod>
-  </url><url>
-    <loc>http://localhost:65139/pt-br/posts/</loc>
-    <lastmod>2025-03-29T00:08:46+01:00</lastmod>
-  </url><url>
-    <loc>http://localhost:65139/manifest.json</loc>
-  </url><url>
-    <loc>http://localhost:65139/pt-br/search/_index.de/</loc>
-    <priority>0.1</priority>
-  </url><url>
-    <loc>http://localhost:65139/pt-br/search/_index.es/</loc>
-    <priority>0.1</priority>
-  </url><url>
-    <loc>http://localhost:65139/pt-br/search/_index.fr/</loc>
-    <priority>0.1</priority>
-  </url><url>
-    <loc>http://localhost:65139/pt-br/search/_index.hi/</loc>
-    <priority>0.1</priority>
-  </url><url>
-    <loc>http://localhost:65139/pt-br/search/_index.jp/</loc>
-    <priority>0.1</priority>
-  </url><url>
-    <loc>http://localhost:65139/pt-br/search/</loc>
-    <priority>0.1</priority>
+    <loc>http://localhost:1313/posts/hello-world/</loc>
+    <lastmod>2025-05-10T13:14:23+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en-US"
-                href="http://localhost:65139/en/search/"
+                hreflang="en"
+                href="http://localhost:1313/en/posts/hello-world/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="pt-BR"
-                href="http://localhost:65139/pt-br/search/"
+                hreflang="pt-br"
+                href="http://localhost:1313/posts/hello-world/"
                 />
   </url><url>
-    <loc>http://localhost:65139/pt-br/search/_index.nl/</loc>
+    <loc>http://localhost:1313/pt-br/posts/hello-world/</loc>
+    <lastmod>2025-04-01T22:06:01+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/manifest.json</loc>
+  </url><url>
+    <loc>http://localhost:1313/search/_index.de/</loc>
     <priority>0.1</priority>
   </url><url>
-    <loc>http://localhost:65139/pt-br/search/_index.pl/</loc>
+    <loc>http://localhost:1313/search/_index.es/</loc>
     <priority>0.1</priority>
   </url><url>
-    <loc>http://localhost:65139/pt-br/search/_index.ru/</loc>
+    <loc>http://localhost:1313/search/_index.fr/</loc>
     <priority>0.1</priority>
   </url><url>
-    <loc>http://localhost:65139/pt-br/search/_index.zh-cn/</loc>
+    <loc>http://localhost:1313/search/_index.hi/</loc>
     <priority>0.1</priority>
   </url><url>
-    <loc>http://localhost:65139/pt-br/categories/</loc>
+    <loc>http://localhost:1313/search/_index.jp/</loc>
+    <priority>0.1</priority>
+  </url><url>
+    <loc>http://localhost:1313/search/</loc>
+    <priority>0.1</priority>
     <xhtml:link
                 rel="alternate"
-                hreflang="en-US"
-                href="http://localhost:65139/en/categories/"
+                hreflang="en"
+                href="http://localhost:1313/en/search/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="pt-BR"
-                href="http://localhost:65139/pt-br/categories/"
+                hreflang="pt-br"
+                href="http://localhost:1313/search/"
                 />
   </url><url>
-    <loc>http://localhost:65139/pt-br/series/</loc>
+    <loc>http://localhost:1313/search/_index.nl/</loc>
+    <priority>0.1</priority>
+  </url><url>
+    <loc>http://localhost:1313/search/_index.pl/</loc>
+    <priority>0.1</priority>
+  </url><url>
+    <loc>http://localhost:1313/search/_index.ru/</loc>
+    <priority>0.1</priority>
+  </url><url>
+    <loc>http://localhost:1313/search/_index.zh-cn/</loc>
+    <priority>0.1</priority>
+  </url><url>
+    <loc>http://localhost:1313/categorias/</loc>
     <xhtml:link
                 rel="alternate"
-                hreflang="en-US"
-                href="http://localhost:65139/en/series/"
+                hreflang="en"
+                href="http://localhost:1313/en/categorias/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="pt-BR"
-                href="http://localhost:65139/pt-br/series/"
+                hreflang="pt-br"
+                href="http://localhost:1313/categorias/"
                 />
   </url><url>
-    <loc>http://localhost:65139/pt-br/tags/</loc>
+    <loc>http://localhost:1313/series/</loc>
     <xhtml:link
                 rel="alternate"
-                hreflang="en-US"
-                href="http://localhost:65139/en/tags/"
+                hreflang="en"
+                href="http://localhost:1313/en/series/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="pt-BR"
-                href="http://localhost:65139/pt-br/tags/"
+                hreflang="pt-br"
+                href="http://localhost:1313/series/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/en/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt-br"
+                href="http://localhost:1313/tags/"
                 />
   </url>
 </urlset>
