@@ -1,6 +1,7 @@
 [en]
   languageCode = 'en'
   languageName = 'English'
+  title = "Ricardinho's Blog"
   weight = 1
   [en.menu]
   [[en.menu.main]]
@@ -11,6 +12,7 @@
 [pt-br]
   languageCode = 'pt-br'
   languageName = 'Português'
+  title = "Blog do Ricardinho"
   weight = 1
   [pt-br.menu]
   [[pt-br.menu.main]]

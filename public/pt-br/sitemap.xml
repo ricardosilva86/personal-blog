@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2025-05-10T13:14:23+02:00</lastmod>
+    <lastmod>2025-05-10T19:14:34+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -16,7 +16,7 @@
                 />
   </url><url>
     <loc>http://localhost:1313/posts/</loc>
-    <lastmod>2025-05-10T13:14:23+02:00</lastmod>
+    <lastmod>2025-05-10T19:14:34+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -29,35 +29,7 @@
                 />
   </url><url>
     <loc>http://localhost:1313/posts/sobre/</loc>
-    <lastmod>2025-05-10T13:14:23+02:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/en/about/</loc>
-    <lastmod>2025-04-01T22:06:01+01:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/en/</loc>
-    <lastmod>2025-04-01T22:06:01+01:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/pt-br/</loc>
-    <lastmod>2025-04-01T22:06:01+01:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/about/</loc>
-    <lastmod>2025-04-01T21:40:25+01:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/en/about/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt-br"
-                href="http://localhost:1313/about/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/pt-br/about/</loc>
-    <lastmod>2025-04-01T22:06:01+01:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/en/posts/hello-world/</loc>
-    <lastmod>2025-04-01T22:06:01+01:00</lastmod>
+    <lastmod>2025-05-10T19:14:34+02:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/hello-world/</loc>
     <lastmod>2025-05-10T13:14:23+02:00</lastmod>
@@ -71,9 +43,6 @@
                 hreflang="pt-br"
                 href="http://localhost:1313/posts/hello-world/"
                 />
-  </url><url>
-    <loc>http://localhost:1313/pt-br/posts/hello-world/</loc>
-    <lastmod>2025-04-01T22:06:01+01:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/manifest.json</loc>
   </url><url>
