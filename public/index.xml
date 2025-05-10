@@ -2,97 +2,111 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blog do Ricardinho</title>
-    <link>https://ricardosilva.xyz/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content on Blog do Ricardinho</description>
     <generator>Hugo</generator>
     <language>pt-br</language>
     <managingEditor>user@example.com (Hugo Author)</managingEditor>
     <webMaster>user@example.com (Hugo Author)</webMaster>
     <copyright>Ricardo Silva</copyright>
-    <lastBuildDate>Sat, 29 Mar 2025 11:01:11 +0100</lastBuildDate>
-    <atom:link href="https://ricardosilva.xyz/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 01 Apr 2025 21:40:25 +0100</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Sobre</title>
-      <link>https://ricardosilva.xyz/about/</link>
+      <link>http://localhost:1313/about.en/</link>
       <pubDate>Sat, 29 Mar 2025 11:01:11 +0100</pubDate><author>user@example.com (Hugo Author)</author>
-      <guid>https://ricardosilva.xyz/about/</guid>
+      <guid>http://localhost:1313/about.en/</guid>
       <description>&lt;h1 id=&#34;quem-sou-eu&#34;&gt;Quem sou eu&lt;/h1&gt;&#xA;&lt;p&gt;Olá 👋🏻! meu nome é Ricardo Silva, sou um Platform/DevOps Engineer, morando na Holanda, curto resolver desafios complexos de infraestrutura e automação. Com uma trajetória em empresas de destaque global como &lt;code&gt;ASML&lt;/code&gt;, &lt;code&gt;Mambu&lt;/code&gt;, &lt;code&gt;Dexter Energy&lt;/code&gt;, &lt;code&gt;UBS&lt;/code&gt;, &lt;code&gt;Atos&lt;/code&gt;, &lt;code&gt;IBM&lt;/code&gt; e &lt;code&gt;Porto Seguro&lt;/code&gt;, venho construindo conhecimento em arquiteturas cloud-native e práticas DevOps.&lt;/p&gt;&#xA;&lt;p&gt;Através deste blog, compartilho insights e experiências práticas acumuladas ao longo da minha jornada profissional. Como profissional certificado em Google Cloud Platform e entusiasta das tecnologias da Hashicorp (especialmente Terraform e Vault), meu objetivo é contribuir com conteúdo técnico mais profundo (quanto possível 😁), focando em soluções práticas e boas práticas de engenharia.&lt;/p&gt;</description>
     </item>
     <item>
-      <title></title>
-      <link>https://ricardosilva.xyz/manifest.json</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
-      <guid>https://ricardosilva.xyz/manifest.json</guid>
+      <title>Sobre</title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Sat, 29 Mar 2025 11:01:11 +0100</pubDate><author>user@example.com (Hugo Author)</author>
+      <guid>http://localhost:1313/about/</guid>
+      <description>&lt;h1 id=&#34;quem-sou-eu&#34;&gt;Quem sou eu&lt;/h1&gt;&#xA;&lt;p&gt;Olá 👋🏻! meu nome é Ricardo Silva, sou um Platform/DevOps Engineer, morando na Holanda, curto resolver desafios complexos de infraestrutura e automação. Com uma trajetória em empresas de destaque global como &lt;code&gt;ASML&lt;/code&gt;, &lt;code&gt;Mambu&lt;/code&gt;, &lt;code&gt;Dexter Energy&lt;/code&gt;, &lt;code&gt;UBS&lt;/code&gt;, &lt;code&gt;Atos&lt;/code&gt;, &lt;code&gt;IBM&lt;/code&gt; e &lt;code&gt;Porto Seguro&lt;/code&gt;, venho construindo conhecimento em arquiteturas cloud-native e práticas DevOps.&lt;/p&gt;&#xA;&lt;p&gt;Através deste blog, compartilho insights e experiências práticas acumuladas ao longo da minha jornada profissional. Como profissional certificado em Google Cloud Platform e entusiasta das tecnologias da Hashicorp (especialmente Terraform e Vault), meu objetivo é contribuir com conteúdo técnico mais profundo (quanto possível 😁), focando em soluções práticas e boas práticas de engenharia.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Hello World</title>
+      <link>http://localhost:1313/posts/hello-world/</link>
+      <pubDate>Sat, 29 Mar 2025 00:05:32 +0100</pubDate><author>user@example.com (Hugo Author)</author>
+      <guid>http://localhost:1313/posts/hello-world/</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>https://ricardosilva.xyz/search/_index.de/</link>
+      <link>http://localhost:1313/manifest.json</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
-      <guid>https://ricardosilva.xyz/search/_index.de/</guid>
+      <guid>http://localhost:1313/manifest.json</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>https://ricardosilva.xyz/search/_index.en/</link>
+      <link>http://localhost:1313/search/_index.de/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
-      <guid>https://ricardosilva.xyz/search/_index.en/</guid>
+      <guid>http://localhost:1313/search/_index.de/</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>https://ricardosilva.xyz/search/_index.es/</link>
+      <link>http://localhost:1313/search/_index.en/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
-      <guid>https://ricardosilva.xyz/search/_index.es/</guid>
+      <guid>http://localhost:1313/search/_index.en/</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>https://ricardosilva.xyz/search/_index.fr/</link>
+      <link>http://localhost:1313/search/_index.es/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
-      <guid>https://ricardosilva.xyz/search/_index.fr/</guid>
+      <guid>http://localhost:1313/search/_index.es/</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>https://ricardosilva.xyz/search/_index.hi/</link>
+      <link>http://localhost:1313/search/_index.fr/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
-      <guid>https://ricardosilva.xyz/search/_index.hi/</guid>
+      <guid>http://localhost:1313/search/_index.fr/</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>https://ricardosilva.xyz/search/_index.jp/</link>
+      <link>http://localhost:1313/search/_index.hi/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
-      <guid>https://ricardosilva.xyz/search/_index.jp/</guid>
+      <guid>http://localhost:1313/search/_index.hi/</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>https://ricardosilva.xyz/search/_index.nl/</link>
+      <link>http://localhost:1313/search/_index.jp/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
-      <guid>https://ricardosilva.xyz/search/_index.nl/</guid>
+      <guid>http://localhost:1313/search/_index.jp/</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>https://ricardosilva.xyz/search/_index.pl/</link>
+      <link>http://localhost:1313/search/_index.nl/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
-      <guid>https://ricardosilva.xyz/search/_index.pl/</guid>
+      <guid>http://localhost:1313/search/_index.nl/</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>https://ricardosilva.xyz/search/_index.ru/</link>
+      <link>http://localhost:1313/search/_index.pl/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
-      <guid>https://ricardosilva.xyz/search/_index.ru/</guid>
+      <guid>http://localhost:1313/search/_index.pl/</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>https://ricardosilva.xyz/search/_index.zh-cn/</link>
+      <link>http://localhost:1313/search/_index.ru/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
-      <guid>https://ricardosilva.xyz/search/_index.zh-cn/</guid>
+      <guid>http://localhost:1313/search/_index.ru/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/search/_index.zh-cn/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
+      <guid>http://localhost:1313/search/_index.zh-cn/</guid>
       <description></description>
     </item>
   </channel>
