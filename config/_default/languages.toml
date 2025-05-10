@@ -1,33 +1,20 @@
+[en]
+  languageCode = 'en'
+  languageName = 'English'
+  weight = 1
+  [en.menu]
+  [[en.menu.main]]
+  identifier = "about"
+  name = "About"
+  pageRef = "about"
+  weight = 10
 [pt-br]
-  languageCode = 'pt-BR'
+  languageCode = 'pt-br'
   languageName = 'Português'
   weight = 1
   [pt-br.menu]
   [[pt-br.menu.main]]
-    identifier = "post"
-    name = "Posts"
-    pageRef = "posts"
-    weight = 10
-
-  [[pt-br.menu.main]]
-    identifier = "about"
+    identifier = "sobre"
     name = "Sobre"
-    pageRef = "about"
-    weight = 20
-[en]
-  languageCode = 'en-US'
-  languageDirection = 'ltr'
-  languageName = 'English'
-  weight = 2
-  [en.menu]
-  [[en.menu.main]]
-    identifier = "post"
-    name = "Posts"
-    pageRef = "posts"
+    pageRef = "sobre"
     weight = 10
-
-  [[en.menu.main]]
-    identifier = "about"
-    name = "About"
-    pageRef = "about"
-    weight = 20

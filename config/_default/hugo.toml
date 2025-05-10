@@ -1,0 +1,39 @@
+baseURL = "https://ricardosilva.xyz"
+title = "Blog do Ricardinho"
+copyright = "Ricardo da Silva"
+# pagination.pagerSize = 3 # for demonstration of pagination
+languageCode = "pt-br"
+defaultContentLanguage = "pt-br"
+enableInlineShortcodes = true
+# prevent build failures when using Hugo's Instagram shortcode due to deprecated Instagram API.
+# See https://github.com/gohugoio/hugo/issues/7228#issuecomment-714490456
+ignoreErrors = ["error-remote-getjson"]
+theme = "tailwind"
+enableGitInfo = true
+sectionPagesMenu = "main"
+
+[markup]
+  _merge = "deep"
+
+[taxonomies]
+category = "categorias"
+tag = "tags"
+series = "series"
+
+[privacy]
+  [privacy.vimeo]
+    disabled = false
+    simple = true
+
+  [privacy.x]
+    disabled = false
+    enableDNT = true
+    simple = true
+
+  [privacy.instagram]
+    disabled = false
+    simple = true
+
+  [privacy.youtube]
+    disabled = false
+    privacyEnhanced = true
