@@ -1,0 +1,74 @@
+# SEO keywords and description for your site.
+keywords = "blog, terraform, vault, hashicorp, tecnologia, conhecimento, cloud"
+subtitle = "Conhecimento compartilhado"
+
+# dir name of your blog content (default is `content/posts`).
+# the list of set content will show up on your index page (baseurl).
+contentTypeName = "post"
+
+jsonLD = true
+
+showAuthor = true
+
+[author]
+  name = "Ricardo Silva"
+  email = "ricardo@ricardosilva.xyz"
+
+[header]
+  logo = "logo.svg"
+  title = "Blog do Ricardinho"
+
+[footer]
+  since = 2025
+  poweredby = true
+
+# giscus is comments system powered by GitHub Discussions
+# generate configurations from https://giscus.app/
+[giscus]
+  enabled = true
+  repo = "ricardosilva86/personal-blog"
+  repoID = "R_kgDOOQfeSQ"
+  category = "Announcements"
+  categoryID = "DIC_kwDOKjVJHM4CafqS"
+  mapping = "pathname"
+  strict = "0"
+  reactionsEnabled = "1"
+  emitMetadata = "0"
+  inputPosition = "bottom"
+  lang = "en"
+
+[social_media]
+  [[social_media.items]]
+    enabled = true
+    title = 'X'
+    icon = 'brand-x'
+    link = 'https://x.com/rico_lopes'
+
+  [[social_media.items]]
+    enabled = true
+    title = 'Instagram'
+    icon = 'brand-instagram'
+    link = 'https://www.instagram.com/'
+
+  [[social_media.items]]
+    enabled = true
+    title = 'LinkedIn'
+    icon = 'brand-linkedin'
+    link = 'https://www.linkedin.com/in/ricardo-ldasilva/'
+
+  [[social_media.items]]
+    enabled = true
+    title = 'Github'
+    icon = 'brand-github'
+    link = 'https://github.com/ricardosilva86'
+
+[pwa]
+  enabled = true
+  icon = "logo.png" # should be in assets
+  icon_sizes = [192, 512]
+
+  # will be used as the manifest.json file and merge the default one
+  # https://developer.mozilla.org/en-US/docs/Web/Manifest
+  # https://web.dev/add-manifest/
+  [manifest]
+  description = "Meu Blog Pessoal"
