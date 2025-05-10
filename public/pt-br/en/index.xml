@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ens on Blog do Ricardinho</title>
+    <link>http://localhost:65139/pt-br/en/</link>
+    <description>Recent content in Ens on Blog do Ricardinho</description>
+    <generator>Hugo</generator>
+    <language>pt-BR</language>
+    <managingEditor>user@example.com (Hugo Author)</managingEditor>
+    <webMaster>user@example.com (Hugo Author)</webMaster>
+    <copyright>Ricardo Silva</copyright>
+    <lastBuildDate>Sat, 29 Mar 2025 11:01:11 +0100</lastBuildDate>
+    <atom:link href="http://localhost:65139/pt-br/en/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About</title>
+      <link>http://localhost:65139/pt-br/en/about/</link>
+      <pubDate>Sat, 29 Mar 2025 11:01:11 +0100</pubDate><author>user@example.com (Hugo Author)</author>
+      <guid>http://localhost:65139/pt-br/en/about/</guid>
+      <description>&lt;h1 id=&#34;who-am-i&#34;&gt;Who am I&lt;/h1&gt;&#xA;&lt;p&gt;Hello 👋🏻! My name is Ricardo Silva, I&amp;rsquo;m a Platform/DevOps Engineer living in the Netherlands, and I enjoy solving complex infrastructure and automation challenges. With a career in globally prominent companies such as &lt;code&gt;ASML&lt;/code&gt;, &lt;code&gt;Mambu&lt;/code&gt;, &lt;code&gt;Dexter Energy&lt;/code&gt;, &lt;code&gt;UBS&lt;/code&gt;, &lt;code&gt;Atos&lt;/code&gt;, &lt;code&gt;IBM&lt;/code&gt;, and &lt;code&gt;Porto Seguro&lt;/code&gt;, I&amp;rsquo;ve been building knowledge in cloud-native architectures and DevOps practices.&lt;/p&gt;&#xA;&lt;p&gt;Through this blog, I share insights and practical experiences accumulated throughout my professional journey. As a certified professional in Google Cloud Platform and an enthusiast of Hashicorp technologies (especially Terraform and Vault), my goal is to contribute with deeper technical content (as much as possible 😁), focusing on practical solutions and good engineering practices.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Hello World</title>
+      <link>http://localhost:65139/pt-br/en/posts/hello-world/</link>
+      <pubDate>Sat, 29 Mar 2025 00:05:32 +0100</pubDate><author>user@example.com (Hugo Author)</author>
+      <guid>http://localhost:65139/pt-br/en/posts/hello-world/</guid>
+      <description>&lt;p&gt;This is my first blog post in English. Welcome to my blog!&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

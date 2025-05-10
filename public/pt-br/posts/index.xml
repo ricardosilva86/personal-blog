@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Blog do Ricardinho</title>
+    <link>http://localhost:65139/pt-br/posts/</link>
+    <description>Recent content in Posts on Blog do Ricardinho</description>
+    <generator>Hugo</generator>
+    <language>pt-BR</language>
+    <managingEditor>user@example.com (Hugo Author)</managingEditor>
+    <webMaster>user@example.com (Hugo Author)</webMaster>
+    <copyright>Ricardo Silva</copyright>
+    <lastBuildDate>Sat, 29 Mar 2025 00:08:46 +0100</lastBuildDate>
+    <atom:link href="http://localhost:65139/pt-br/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hello World</title>
+      <link>http://localhost:65139/pt-br/posts/hello-world/</link>
+      <pubDate>Sat, 29 Mar 2025 00:05:32 +0100</pubDate><author>user@example.com (Hugo Author)</author>
+      <guid>http://localhost:65139/pt-br/posts/hello-world/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>
