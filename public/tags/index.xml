@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on My Personal Blog</title>
-    <link>https://ricardosilva.xyz/tags/</link>
-    <description>Recent content in Tags on My Personal Blog</description>
+    <title>Tags on Blog do Ricardinho</title>
+    <link>http://localhost:1313/tags/</link>
+    <description>Recent content in Tags on Blog do Ricardinho</description>
     <generator>Hugo</generator>
-    <language>en</language>
-    <managingEditor>user@example.com (Hugo Author)</managingEditor>
-    <webMaster>user@example.com (Hugo Author)</webMaster>
-    <copyright>Ricardo Silva</copyright>
-    <atom:link href="https://ricardosilva.xyz/tags/index.xml" rel="self" type="application/rss+xml" />
+    <language>pt-br</language>
+    <managingEditor>ricardo@ricardosilva.xyz (Ricardo Silva)</managingEditor>
+    <webMaster>ricardo@ricardosilva.xyz (Ricardo Silva)</webMaster>
+    <copyright>Ricardo da Silva</copyright>
+    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

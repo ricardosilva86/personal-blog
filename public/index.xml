@@ -1,84 +1,98 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>My Personal Blog</title>
-    <link>https://ricardosilva.xyz/</link>
-    <description>Recent content on My Personal Blog</description>
+    <title>Blog do Ricardinho</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on Blog do Ricardinho</description>
     <generator>Hugo</generator>
-    <language>en</language>
-    <managingEditor>user@example.com (Hugo Author)</managingEditor>
-    <webMaster>user@example.com (Hugo Author)</webMaster>
-    <copyright>Ricardo Silva</copyright>
-    <lastBuildDate>Mon, 01 Jan 0001 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://ricardosilva.xyz/index.xml" rel="self" type="application/rss+xml" />
+    <language>pt-br</language>
+    <managingEditor>ricardo@ricardosilva.xyz (Ricardo Silva)</managingEditor>
+    <webMaster>ricardo@ricardosilva.xyz (Ricardo Silva)</webMaster>
+    <copyright>Ricardo da Silva</copyright>
+    <lastBuildDate>Sat, 10 May 2025 10:35:29 +0200</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title></title>
-      <link>https://ricardosilva.xyz/manifest.json</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
-      <guid>https://ricardosilva.xyz/manifest.json</guid>
+      <title>Sobre</title>
+      <link>http://localhost:1313/posts/sobre/</link>
+      <pubDate>Sat, 10 May 2025 10:35:29 +0200</pubDate><author>ricardo@ricardosilva.xyz (Ricardo Silva)</author>
+      <guid>http://localhost:1313/posts/sobre/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Hello World</title>
+      <link>http://localhost:1313/posts/hello-world/</link>
+      <pubDate>Sat, 29 Mar 2025 00:05:32 +0100</pubDate><author>ricardo@ricardosilva.xyz (Ricardo Silva)</author>
+      <guid>http://localhost:1313/posts/hello-world/</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>https://ricardosilva.xyz/search/_index.de/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
-      <guid>https://ricardosilva.xyz/search/_index.de/</guid>
+      <link>http://localhost:1313/manifest.json</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>ricardo@ricardosilva.xyz (Ricardo Silva)</author>
+      <guid>http://localhost:1313/manifest.json</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>https://ricardosilva.xyz/search/_index.es/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
-      <guid>https://ricardosilva.xyz/search/_index.es/</guid>
+      <link>http://localhost:1313/search/_index.de/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>ricardo@ricardosilva.xyz (Ricardo Silva)</author>
+      <guid>http://localhost:1313/search/_index.de/</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>https://ricardosilva.xyz/search/_index.fr/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
-      <guid>https://ricardosilva.xyz/search/_index.fr/</guid>
+      <link>http://localhost:1313/search/_index.es/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>ricardo@ricardosilva.xyz (Ricardo Silva)</author>
+      <guid>http://localhost:1313/search/_index.es/</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>https://ricardosilva.xyz/search/_index.hi/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
-      <guid>https://ricardosilva.xyz/search/_index.hi/</guid>
+      <link>http://localhost:1313/search/_index.fr/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>ricardo@ricardosilva.xyz (Ricardo Silva)</author>
+      <guid>http://localhost:1313/search/_index.fr/</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>https://ricardosilva.xyz/search/_index.jp/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
-      <guid>https://ricardosilva.xyz/search/_index.jp/</guid>
+      <link>http://localhost:1313/search/_index.hi/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>ricardo@ricardosilva.xyz (Ricardo Silva)</author>
+      <guid>http://localhost:1313/search/_index.hi/</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>https://ricardosilva.xyz/search/_index.nl/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
-      <guid>https://ricardosilva.xyz/search/_index.nl/</guid>
+      <link>http://localhost:1313/search/_index.jp/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>ricardo@ricardosilva.xyz (Ricardo Silva)</author>
+      <guid>http://localhost:1313/search/_index.jp/</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>https://ricardosilva.xyz/search/_index.pl/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
-      <guid>https://ricardosilva.xyz/search/_index.pl/</guid>
+      <link>http://localhost:1313/search/_index.nl/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>ricardo@ricardosilva.xyz (Ricardo Silva)</author>
+      <guid>http://localhost:1313/search/_index.nl/</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>https://ricardosilva.xyz/search/_index.ru/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
-      <guid>https://ricardosilva.xyz/search/_index.ru/</guid>
+      <link>http://localhost:1313/search/_index.pl/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>ricardo@ricardosilva.xyz (Ricardo Silva)</author>
+      <guid>http://localhost:1313/search/_index.pl/</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>https://ricardosilva.xyz/search/_index.zh-cn/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
-      <guid>https://ricardosilva.xyz/search/_index.zh-cn/</guid>
+      <link>http://localhost:1313/search/_index.ru/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>ricardo@ricardosilva.xyz (Ricardo Silva)</author>
+      <guid>http://localhost:1313/search/_index.ru/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/search/_index.zh-cn/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>ricardo@ricardosilva.xyz (Ricardo Silva)</author>
+      <guid>http://localhost:1313/search/_index.zh-cn/</guid>
       <description></description>
     </item>
   </channel>

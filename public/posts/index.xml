@@ -1,15 +1,29 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on My Personal Blog</title>
-    <link>https://ricardosilva.xyz/posts/</link>
-    <description>Recent content in Posts on My Personal Blog</description>
+    <title>Posts on Blog do Ricardinho</title>
+    <link>http://localhost:1313/posts/</link>
+    <description>Recent content in Posts on Blog do Ricardinho</description>
     <generator>Hugo</generator>
-    <language>en</language>
-    <managingEditor>user@example.com (Hugo Author)</managingEditor>
-    <webMaster>user@example.com (Hugo Author)</webMaster>
-    <copyright>Ricardo Silva</copyright>
-    <lastBuildDate></lastBuildDate>
-    <atom:link href="https://ricardosilva.xyz/posts/index.xml" rel="self" type="application/rss+xml" />
+    <language>pt-br</language>
+    <managingEditor>ricardo@ricardosilva.xyz (Ricardo Silva)</managingEditor>
+    <webMaster>ricardo@ricardosilva.xyz (Ricardo Silva)</webMaster>
+    <copyright>Ricardo da Silva</copyright>
+    <lastBuildDate>Sat, 10 May 2025 10:35:29 +0200</lastBuildDate>
+    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Sobre</title>
+      <link>http://localhost:1313/posts/sobre/</link>
+      <pubDate>Sat, 10 May 2025 10:35:29 +0200</pubDate><author>ricardo@ricardosilva.xyz (Ricardo Silva)</author>
+      <guid>http://localhost:1313/posts/sobre/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Hello World</title>
+      <link>http://localhost:1313/posts/hello-world/</link>
+      <pubDate>Sat, 29 Mar 2025 00:05:32 +0100</pubDate><author>ricardo@ricardosilva.xyz (Ricardo Silva)</author>
+      <guid>http://localhost:1313/posts/hello-world/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>
