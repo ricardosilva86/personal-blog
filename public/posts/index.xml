@@ -9,8 +9,15 @@
     <managingEditor>ricardo@ricardosilva.xyz (Ricardo Silva)</managingEditor>
     <webMaster>ricardo@ricardosilva.xyz (Ricardo Silva)</webMaster>
     <copyright>Ricardo da Silva</copyright>
-    <lastBuildDate>Sat, 10 May 2025 19:14:34 +0200</lastBuildDate>
+    <lastBuildDate>Sun, 11 May 2025 10:26:05 +0200</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>OIDC vs Workload Identity Federation com Vault e GCP</title>
+      <link>http://localhost:1313/posts/vault/oidc-wif/</link>
+      <pubDate>Sun, 11 May 2025 10:26:05 +0200</pubDate><author>ricardo@ricardosilva.xyz (Ricardo Silva)</author>
+      <guid>http://localhost:1313/posts/vault/oidc-wif/</guid>
+      <description>&lt;p&gt;Recentemente começamos a implementar uma solução de segurança um pouco mais robusta ao invés do velho modelo de &lt;em&gt;service account&lt;/em&gt; em &lt;em&gt;god-mode&lt;/em&gt; (uma conta com acesso total a tudo), onde vamos implementar um modelo baseado em &lt;strong&gt;least privileged access&lt;/strong&gt;. Juntamente com essa decisão, tivemos que decidir o que exatamente iriamos usar, OIDC&lt;sup&gt;1&lt;/sup&gt; ou WIF&lt;sup&gt;2&lt;/sup&gt; (&lt;em&gt;Workload Identity Federation&lt;/em&gt;).&lt;/p&gt;&#xA;&lt;p&gt;Então resolvi destrinchar o que significa adotar cada um desses modelos, o que está por trás deles e seus principais conceitos. No meio disso tudo, vou tentar demonstrar como implementar ambos usando &lt;strong&gt;Hashicorp Vault&lt;/strong&gt; no &lt;em&gt;Google Cloud&lt;/em&gt;.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Sobre</title>
       <link>http://localhost:1313/posts/sobre/</link>

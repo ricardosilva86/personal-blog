@@ -3,10 +3,29 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://localhost:1313/en/posts/about/</loc>
-    <lastmod>2025-05-10T13:19:34+02:00</lastmod>
+    <lastmod>2025-05-10T23:52:44+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/en/tags/about/</loc>
+    <lastmod>2025-05-10T23:52:44+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/en/tags/en/</loc>
+    <lastmod>2025-05-10T23:52:44+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/en/tags/hello-world/</loc>
+    <lastmod>2025-05-10T23:52:44+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt-br"
+                href="http://localhost:1313/tags/hello-world/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/en/tags/hello-world/"
+                />
   </url><url>
     <loc>http://localhost:1313/en/posts/</loc>
-    <lastmod>2025-05-10T13:19:34+02:00</lastmod>
+    <lastmod>2025-05-10T23:52:44+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-br"
@@ -19,7 +38,7 @@
                 />
   </url><url>
     <loc>http://localhost:1313/en/</loc>
-    <lastmod>2025-05-10T13:19:34+02:00</lastmod>
+    <lastmod>2025-05-10T23:52:44+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-br"
@@ -29,6 +48,19 @@
                 rel="alternate"
                 hreflang="en"
                 href="http://localhost:1313/en/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/en/tags/</loc>
+    <lastmod>2025-05-10T23:52:44+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt-br"
+                href="http://localhost:1313/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/en/tags/"
                 />
   </url><url>
     <loc>http://localhost:1313/en/posts/hello-world/</loc>
@@ -79,18 +111,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="http://localhost:1313/en/series/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/en/tags/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt-br"
-                href="http://localhost:1313/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/en/tags/"
                 />
   </url>
 </urlset>

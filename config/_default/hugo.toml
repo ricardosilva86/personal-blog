@@ -14,6 +14,32 @@ sectionPagesMenu = "main"
 
 [markup]
   _merge = "deep"
+  [markup.goldmark]
+    duplicateResourceFiles = false
+  [markup.goldmark.extensions]
+    definitionList = true
+    footnote = true
+    linkify = true
+    linkifyProtocol = 'https'
+    strikethrough = true
+    table = true
+    taskList = true
+  [markup.goldmark.extensions.cjk]
+    eastAsianLineBreaks = false
+    eastAsianLineBreaksStyle = 'simple'
+    enable = false
+    escapedSpace = false
+  [markup.goldmark.extensions.extras]
+    [markup.goldmark.extensions.extras.delete]
+      enable = true
+    [markup.goldmark.extensions.extras.insert]
+      enable = true
+    [markup.goldmark.extensions.extras.mark]
+      enable = true
+    [markup.goldmark.extensions.extras.subscript]
+      enable = true
+    [markup.goldmark.extensions.extras.superscript]
+      enable = true
 
 [taxonomies]
 category = "categorias"

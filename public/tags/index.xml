@@ -9,6 +9,63 @@
     <managingEditor>ricardo@ricardosilva.xyz (Ricardo Silva)</managingEditor>
     <webMaster>ricardo@ricardosilva.xyz (Ricardo Silva)</webMaster>
     <copyright>Ricardo da Silva</copyright>
+    <lastBuildDate>Sun, 11 May 2025 10:26:05 +0200</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cloud</title>
+      <link>http://localhost:1313/tags/cloud/</link>
+      <pubDate>Sun, 11 May 2025 10:26:05 +0200</pubDate><author>ricardo@ricardosilva.xyz (Ricardo Silva)</author>
+      <guid>http://localhost:1313/tags/cloud/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Gpc</title>
+      <link>http://localhost:1313/tags/gpc/</link>
+      <pubDate>Sun, 11 May 2025 10:26:05 +0200</pubDate><author>ricardo@ricardosilva.xyz (Ricardo Silva)</author>
+      <guid>http://localhost:1313/tags/gpc/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Oidc</title>
+      <link>http://localhost:1313/tags/oidc/</link>
+      <pubDate>Sun, 11 May 2025 10:26:05 +0200</pubDate><author>ricardo@ricardosilva.xyz (Ricardo Silva)</author>
+      <guid>http://localhost:1313/tags/oidc/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Vault</title>
+      <link>http://localhost:1313/tags/vault/</link>
+      <pubDate>Sun, 11 May 2025 10:26:05 +0200</pubDate><author>ricardo@ricardosilva.xyz (Ricardo Silva)</author>
+      <guid>http://localhost:1313/tags/vault/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Wif</title>
+      <link>http://localhost:1313/tags/wif/</link>
+      <pubDate>Sun, 11 May 2025 10:26:05 +0200</pubDate><author>ricardo@ricardosilva.xyz (Ricardo Silva)</author>
+      <guid>http://localhost:1313/tags/wif/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Hello-World</title>
+      <link>http://localhost:1313/tags/hello-world/</link>
+      <pubDate>Sat, 10 May 2025 10:35:29 +0200</pubDate><author>ricardo@ricardosilva.xyz (Ricardo Silva)</author>
+      <guid>http://localhost:1313/tags/hello-world/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Pt-Br</title>
+      <link>http://localhost:1313/tags/pt-br/</link>
+      <pubDate>Sat, 10 May 2025 10:35:29 +0200</pubDate><author>ricardo@ricardosilva.xyz (Ricardo Silva)</author>
+      <guid>http://localhost:1313/tags/pt-br/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Sobre</title>
+      <link>http://localhost:1313/tags/sobre/</link>
+      <pubDate>Sat, 10 May 2025 10:35:29 +0200</pubDate><author>ricardo@ricardosilva.xyz (Ricardo Silva)</author>
+      <guid>http://localhost:1313/tags/sobre/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>
