@@ -4,7 +4,10 @@ draft = true
 title = 'Automatizando Terraform com GitOps: Um guia para iniciantes com Atlantis'
 +++
 
-Embora muitos de nós já tenhamos nos livrado de rodar `terraform apply` localmente, infelizmente outros ainda não encontraram uma forma de se livrar desse carma. Seja por falta de conhecimento ("às vezes o indivíduo está nas drogas"), seja por restrições de orçamento (Terraform Cloud custa algo em torno de $0.10USD/recurso gerenciado 🤑). Qualquer que seja desses problemas, vou tentar te ajudar a resolver isso e sair dessa vida miserável 😅.  
+Embora muitos de nós já tenhamos nos livrado de rodar `terraform apply` localmente, infelizmente outros ainda não encontraram uma forma de se livrar desse carma. 
+> Oh! E agora, quem poderá me defender?
+
+Seja por falta de conhecimento, seja por restrições de orçamento (Terraform Cloud custa algo em torno de $0.10USD/recurso gerenciado 🤑). Qualquer que seja desses problemas, vou tentar te ajudar a resolver isso e sair dessa vida miserável 😅.  
 
 A forma mais simples e barata que vou te apresentar é usando o [Atlantis](https://www.runatlantis.io/).
 
@@ -225,8 +228,8 @@ Logo após criar esse diretório, crie o arquivo chamado `repos.yaml` dentro do 
 repos:
 - id: /.*/
   branch: /.*/
-  plan_requirements: [mergeable, undiverged]
-  apply_requirements: [mergeable, undiverged]
+  plan_requirements: []
+  apply_requirements: [mergeable, undiverged, applied]
   import_requirements: [mergeable, undiverged]
   allowed_overrides: [apply_requirements, workflow, delete_source_branch_on_merge, repo_locking, repo_locks, custom_policy_check, import_requirements, plan_requirements, silence_pr_comments]
   # allowed_workflows: [development,production] ≤- vamos usar essas configurações depois
@@ -240,8 +243,6 @@ repos:
     mode: auto
 
 - id: github.com/ricardosilva86/atlantis-intro-tf
-- id: github.com/ricardosilva86/outro-repositorio
-- id: github.com/ricardosilva86/outro-outro-repositorio
 ```
 
 > Tem inúmeras formas de configurar seus repositórios, caso precise de algo a mais, tente a documentação oficial, que é ótima, [aqui](https://www.runatlantis.io/docs/server-side-repo-config.html).
@@ -265,7 +266,7 @@ Finalmente, vamos colocar essa joça pra rodar! Mas primeiro, vamos recapitular 
 2. Criamos o diretório local que será montado no container do Atlantis, e dentro desse diretório criamos o `repos.yaml`. Então colocamos o conteúdo do arquivo de configuração para o Atlantis.
 3. Criamos o webhook que vai fazer a chamada para o Atlantis executar o _workflow_: em outras palavras, o `plan` e `apply` do lado do servidor.
 
-Pow, finalmente é hora de do show down!
+Pow, finalmente é hora do show!
 
 ```shell
 docker compose up -d
@@ -311,3 +312,60 @@ Vamos ver se realmente funcionou essa geringonça mágica:
 
 Se os 3 checks funcionaram significa que temos tudo funcionando!
 > "Não contavam com a minha astúcia!"
+
+Hora de testar se realmente está funcionando a integração com o GitHub 🥁🥁🥁
+
+Vamos fazer uma alteração no código do Github e criar um Pull Request. Assim que você alterar o código e enviar a nova _branch_ e criar o PR, você verá algo assim:
+![img.png](images/atlantis-intro-new-pr.png)
+
+Digamos que eu fiquei feliz com o resultado do `plan` e quero aplicar, basta comentar `atlantis apply` e você verá o seguinte:
+![img.png](images/atlantis-intro-fail-to-apply.png)
+
+Deu ruim porque definimos que o código só pode ser aplicado caso o PR esteja `mergeable, undiverged, applied`, ou seja, precisa estar sem conflitos, estar à frente da _branch_ alvo (se aparecer `n commits behind` em algum lugar do seu PR, significa que está faltando commits que já foram para a _branch_  alvo/_target_ e não foram para o seu PR) e finalmente, precisa estar aprovado.
+
+> Se você está testando sozinho, remova o `approved` porque o GitHub não permite aprovação do PR pelo seu autor, a menos que você crie um ruleset que defina o Bypass para administradores.
+
+Pronto, se liga:
+![img.png](images/atlantis-intro-apply-successful.png)
+
+```terminaloutput
+aws_s3_bucket.balde-de-lixo: Creating...
+aws_s3_bucket.balde-de-lixo: Creation complete after 1s [id=balde-de-lixo-do-plancton]
+
+Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
+
+Outputs:
+
+domain_name = "balde-de-lixo-do-plancton.s3.amazonaws.com"
+```
+
+Vamos ver se realmente funcionou?
+```shell
+aws s3 cp atlantis.yaml s3://balde-de-lixo-do-plancton --region eu-central-1
+```
+Resultado:
+```terminaloutput
+upload: ./atlantis.yaml to s3://balde-de-lixo-do-plancton/atlantis.yaml
+```
+
+## Workflow Customizado
+
+Até aqui, foi molezinha... criamos um `repos.yaml` e um arquivo do docker compose, expomos o serviço via `zrok`, configuramos o webhook e pronto, automágicamente as coisas funcionaram.
+
+Só que normalmente a vida não é justa, nem tão simples. Existem casos que precisamos de um fluxo diferente do padrão do Atlantis para funcionar corretamente. É aí que entram os _workflows_ customizados.
+
+Para demonstrar um _workflow_ customizado, vou usar o `infracost` como exemplo principal e depois vou apresentar um pequeno exemplo de como usar _workflow_ customizado para trabalhar com diferentes ambientes, dev e produção.
+
+### Infracost
+
+
+
+## Conclusão
+Neste artigo, apresentei o Atlantis como uma solução GitOps acessível e poderosa para automatizar nossos workflows de Terraform, eliminando a necessidade de executar `terraform apply` manualmente da nossa máquina.  
+
+Eu guiei você através do processo de instalação e configuração usando Docker Compose e `zrok` para expor nossa instância local à internet. Cobrimos os passos essenciais, como:
+- Obter credenciais de acesso na AWS.
+- Gerar um token de acesso pessoal no GitHub.
+- Configurar o webhook no repositório para que o Atlantis seja notificado sobre novos Pull Requests.
+
+Finalmente, demonstramos o fluxo completo em ação. Vimos como um Pull Request com alterações no código de infraestrutura acionou um `terraform plan` automático como um comentário e, após a aprovação, um simples `atlantis apply` foi o suficiente para executar as mudanças, validando todo o nosso setup com a criação de um bucket S3.
