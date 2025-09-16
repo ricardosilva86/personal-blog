@@ -70,7 +70,7 @@ Como o serviço do Atlantis estará rodando localmente na nossa máquina, precis
 
 Para o zrok poder expor o Atlantis, precisamos habilitar nosso ambiente (nossa máquina), para isso, siga os passos [aqui](https://docs.zrok.io/docs/getting-started/#enabling-your-zrok-environment). Após habilitar o ambiente, precisamos reservar um endereço público, para isso execute o seguinte commando:
 ```bash
-zrok reserve public --unique-name "atlantis" https:atlantis:4141
+zrok reserve public --unique-name "atlantis" atlantis:4141
 ```
 O zrok vai te dar uma URL publica, copie o valor para usarmos no arquivo do docker compose.
 ```terminaloutput
@@ -113,7 +113,6 @@ services:
       AWS_SECRET_ACCESS_KEY: "<AWS secret key>"
       AWS_REGION: "eu-central-1"
       ATLANTIS_AUTOMERGE: true
-    command: server --config /path/to/config.yaml
     ports:
       - 4141:4141
     volumes:
@@ -248,4 +247,60 @@ repos:
 > Tem inúmeras formas de configurar seus repositórios, caso precise de algo a mais, tente a documentação oficial, que é ótima, [aqui](https://www.runatlantis.io/docs/server-side-repo-config.html).
 
 Basicamente aqui eu setei uma configuração global com `id: /.*/`. Todos os repositórios herdam essa configuração e caso você queira mudar algo, basta adicionar a mudança para o repositório específico.
+
+#### Criando o webhook no GitHub
+
+Agora vamos para a última parte desse setup, criar o webhook no nosso repositório do GitHub. 
+
+Acesse o seu repositório no GitHub e vá em **Settings**, no menu lateral clique em **Webhook**. Em **Payload URL** entre com a URL que o `zrok` nos forneceu e adicione `/events`, no **Content type**, selecione `application/json` e entre com o mesmo segredo que geramos para a variável `ATLANTIS_GH_WEBHOOK_SECRET` na primeira parte. Agora vamos escolher que eventos vão acionar o webhook, selecione **Let me select individual events.** e então marque as opções: **Pull request reviews**, **Pull requests**, **Pushes** e **Issue comments**. Certifique-se que o checkbox de **Active** está marcado e clique em **Add webhook**.
+> Lembra lá no começo que tínhamos como criar 2 tipos diferentes de token, um **Personal access token** e o **App token**? Se você optar por um **App token**, o webhook é criado automaticamente. Veja a documentação [aqui](https://www.runatlantis.io/docs/configuring-webhooks.html#github-github-enterprise).
+> Também é possível instalar o webhook a nível de organização, o que agiliza o processo de configuração desses webhooks, mas também é necessário desabilitar para repositórios que não são código de infraestrutura.
+
+Finalmente, vamos colocar essa joça pra rodar! Mas primeiro, vamos recapitular o que fizemos até aqui:
+
+> "Ora, ora não se irrite... 🤷‍♂️"
+
+#### Explicando o que fizemos até aqui pt.2:
+1. Criamos um repositório no GitHub e criamos um código bem elementar de Terraform;
+2. Criamos o diretório local que será montado no container do Atlantis, e dentro desse diretório criamos o `repos.yaml`. Então colocamos o conteúdo do arquivo de configuração para o Atlantis.
+3. Criamos o webhook que vai fazer a chamada para o Atlantis executar o _workflow_: em outras palavras, o `plan` e `apply` do lado do servidor.
+
+Pow, finalmente é hora de do show down!
+
+```shell
+docker compose up -d
+```
+
+```terminaloutput
+WARN[0000] The "UID" variable is not set. Defaulting to a blank string. 
+[+] Running 24/24
+ ✔ zrok Pulled                                                                                                                                                                    19.3s 
+   ✔ 7b061f511294 Pull complete                                                                                                                                                   10.5s 
+   ✔ 3d6607d3dbc4 Pull complete                                                                                                                                                   10.5s 
+   ✔ 6cff76b535d3 Pull complete                                                                                                                                                   13.1s 
+   ✔ b3d72ae26f8f Pull complete                                                                                                                                                   13.5s 
+   ✔ d5b4f1acfb29 Pull complete                                                                                                                                                   13.5s 
+   ✔ 77b5f4970fe8 Pull complete                                                                                                                                                   13.5s 
+   ✔ 9e3046e1ce9b Pull complete                                                                                                                                                   13.5s 
+   ✔ 4f4fb700ef54 Pull complete                                                                                                                                                   13.9s 
+   ✔ b9529084985f Pull complete                                                                                                                                                   16.4s 
+   ✔ c30168d90002 Pull complete                                                                                                                                                   16.4s 
+   ✔ eac112e77b9c Pull complete                                                                                                                                                   16.5s 
+   ✔ 95c29cd56481 Pull complete                                                                                                                                                   16.5s 
+   ✔ cd012eabab7e Pull complete                                                                                                                                                   17.5s 
+ ✔ atlantis Pulled                                                                                                                                                                16.7s 
+   ✔ 6e771e15690e Pull complete                                                                                                                                                    6.5s 
+   ✔ 305ced8d2b86 Pull complete                                                                                                                                                    6.5s 
+   ✔ fc5cd065b9fe Pull complete                                                                                                                                                    6.9s 
+   ✔ e9bfac012337 Pull complete                                                                                                                                                   10.5s 
+   ✔ 2bea7a2ea3a3 Pull complete                                                                                                                                                   12.1s 
+   ✔ d47b004927cf Pull complete                                                                                                                                                   12.6s 
+   ✔ 2d95b90dee76 Pull complete                                                                                                                                                   12.9s 
+   ✔ 5032dfc784ba Pull complete                                                                                                                                                   12.9s 
+   ✔ b6b31555fe60 Pull complete                                                                                                                                                   15.3s 
+[+] Running 3/3
+ ✔ Network atlantis-intro_default       Created                                                                                                                                    0.1s 
+ ✔ Container atlantis-intro-zrok-1      Started                                                                                                                                    1.7s 
+ ✔ Container atlantis-intro-atlantis-1  Started                                                                                                                                    1.7s 
+```
 
