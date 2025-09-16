@@ -42,13 +42,13 @@ showAuthor = true
     enabled = true
     title = 'X'
     icon = 'brand-x'
-    link = 'https://x.com/rico_lopes'
+    link = 'https://x.com/ricolopes'
 
   [[social_media.items]]
     enabled = true
     title = 'Instagram'
     icon = 'brand-instagram'
-    link = 'https://www.instagram.com/'
+    link = 'https://www.instagram.com/rick.lopes_/'
 
   [[social_media.items]]
     enabled = true
