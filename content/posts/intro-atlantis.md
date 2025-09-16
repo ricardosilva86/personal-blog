@@ -35,7 +35,7 @@ Soluções comuns são pipelines de CI/CD como Gitlab ou Github Actions, que ger
 Bom, vamos ao que interessa, "Atlantis ao resgate!"
 
 ## Instalação do Atlantis
-Para manter simples (ou pelo menos o mais simples possível) todo esse artigo, vou adotar o Docker compose juntamente com o [zrok](zrok.io) para rodar o serviço localmente. E vou usar o GitHub para servir de repositório para o nosso código Terraform.  
+Para manter simples (ou pelo menos o mais simples possível) todo esse artigo, vou adotar o Docker compose juntamente com o [zrok](https://zrok.io) para rodar o serviço localmente. E vou usar o GitHub para servir de repositório para o nosso código Terraform.  
 
 Então aqui vai uma listinha do que precisamos ter para fazer acontecer: 
 1. Conta na [AWS](https://aws.amazon.com/pt/getting-started/guides/setup-environment/module-one/)
@@ -113,6 +113,7 @@ services:
       AWS_SECRET_ACCESS_KEY: "<AWS secret key>"
       AWS_REGION: "eu-central-1"
       ATLANTIS_AUTOMERGE: true
+    command: server --config /path/to/config.yaml
     ports:
       - 4141:4141
     volumes:
@@ -123,17 +124,128 @@ services:
 Obviamente precisamos substituir os valores importantes aqui pelos nossos próprios:
 - `ATLANTIS_ATLANTIS_URL`: aquela URL que o zrok nos deu logo após a criação do ambiente
 - `ATLANTIS_GH_TOKEN`: precisamos de um Token para o Atlantis poder autenticar no GitHub
-- `ATLANTIS_GH_WEBHOOK_SECRET`: gere um número aleatório usando o [random.org](random.org), não use caracteres especiais, apenas [a-z] [A-Z] [0-9] com 32 caracteres.
-- `ATLANTIS_REPO_ALLOWLIST`: a URL do nosso repositório do GitHub, veja [aqui]() como é o formato dessa URL
+- `ATLANTIS_GH_WEBHOOK_SECRET`: gere um número aleatório usando o [random.org](https://random.org), não use caracteres especiais, apenas `[a-z] [A-Z] [0-9]` com 32 caracteres.
+- `ATLANTIS_REPO_ALLOWLIST`: a URL do nosso repositório do GitHub, veja [aqui](https://www.runatlantis.io/docs/server-configuration.html#repo-allowlist) como é o formato dessa URL
 - `ATLANTIS_REPO_CONFIG`: onde vamos encontrar o arquivo de configuração do Atlantis no lado do servidor
 - `ATLANTIS_EMOJI_REACTION`: o nome do emoji que o Atlantis irá reagir quando perceber o comentário `atlantis plan/apply` no seu MR/PR.
 - `AWS_ACCESS_KEY_ID`: aqui vai a key ID da AWS para o usuário `atlantis` que criamos no primeiro passo.
 - `AWS_SECRET_ACCESS_KEY`: obviamente aqui vai o secret key.
 
+> 🚀 "Ora, ora, não se irrite", eu sei que você quer rodar um `docker compose up`, mas ainda precisamos cuidar de mais alguns detalhes, mas primeiro, vamos recapitular o que foi feito até agora.
+
 #### Explicando o que fizemos até aqui:
-1. Criamos um usuário na AWS, atrelamos uma _policy_ para esse usuário poder realizar as ações que queremos, no nosso exemplo aqui, só teremos acesso ao S3. Criamos também a Access Key e guardamos as credenciais de forma segura -- eu salvei no meu 1Password ;)
+1. Criamos um usuário na AWS, atrelamos uma _policy_ para esse usuário poder realizar as ações que precisamos, no nosso exemplo aqui, só teremos acesso ao S3. Criamos também a Access Key e guardamos as credenciais de forma segura -- eu salvei no meu 1Password ;)
 2. Também criamos o nosso **Personal access token** no GitHub para que o Atlantis possa acessar o repositório contendo o código Terraform que ele irá automatizar.
 3. Instalamos e habilitamos o `zrok` para podermos expor o Atlantis à internet.
-4. Criamos o nosso arquivo do docker-compose.yaml para poder subir o serviço do Atlantis.
+4. Criamos o nosso arquivo do `docker-compose.yaml` para poder subir o serviço do Atlantis.
 
-Até esse ponto temos tudo no lugar, agora só precisamos fazer com que funcione. 
+Até esse ponto temos quase tudo no lugar, agora só precisamos de mais alguns detalhes. 
+
+> "Sigam-me os bons". 
+
+## Configurando o Atlantis
+
+### Código Terraform que vamos automatizar
+Criei um repositório no GitHub para poder demonstrar o que vamos fazer. Basicamente temos o seguinte código:
+
+```hcl
+# main.tf
+resource "aws_s3_bucket" "balde-de-lixo" {
+  bucket = var.nome_do_balde
+  tags   = var.tags
+}
+
+```
+
+```hcl
+# backend.tf
+terraform {
+  backend "s3" {
+    bucket = "atlantis-tfstate-files"
+    key    = "atlantis-intro/terraform.tfstate"
+    region = "eu-central-1"
+  }
+}
+```
+
+```hcl
+# providers.tf
+terraform {
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 6.0"
+    }
+  }
+}
+
+provider "aws" {
+  region = "eu-central-1"
+}
+```
+
+```hcl
+# outputs.tf
+output "domain_name" {
+  value = aws_s3_bucket.balde-de-lixo.bucket_domain_name
+}
+```
+
+```hcl
+# variables.tf
+variable "nome_do_balde" {
+  type = string
+}
+
+variable "tags" {
+  type = map(string)
+}
+```
+
+```hcl
+# terraform.tfvars
+nome_do_balde = "balde-de-lixo-do-plancton"
+tags = {
+  Env  = "dev"
+  Team = "Infra"
+}
+```
+
+Código bem simples para criar um bucket no S3, usando outro bucket como backend para o nosso estado.
+
+Agora temos 2 passos importantes para configurar o Atlantis: 1. o arquivo de configuração do Atlantis e 2. o webhook do GitHub para chamar o Atlantis.
+
+### O Arquivo de configuração do Atlantis
+
+No `docker-compose.yml` nós criamos logo acima, montamos um volume: o nosso home que aponta para um diretório escondido chamado `.atlantis`. Caso você ainda não tenha criado esse diretório, agora é o momento.
+
+Logo após criar esse diretório, crie o arquivo chamado `repos.yaml` dentro do recem criado diretório.
+
+```yaml
+# uma lista de configuração de repositórios
+repos:
+- id: /.*/
+  branch: /.*/
+  plan_requirements: [mergeable, undiverged]
+  apply_requirements: [mergeable, undiverged]
+  import_requirements: [mergeable, undiverged]
+  allowed_overrides: [apply_requirements, workflow, delete_source_branch_on_merge, repo_locking, repo_locks, custom_policy_check, import_requirements, plan_requirements, silence_pr_comments]
+  # allowed_workflows: [development,production] ≤- vamos usar essas configurações depois
+  # allow_custom_workflows: true ≤- vamos usar essas configurações depois
+  repo_locking: true
+  repo_locks:
+    mode: on_plan
+  custom_policy_check: false
+  policy_check: false
+  autodiscover:
+    mode: auto
+
+- id: github.com/ricardosilva86/atlantis-intro-tf
+- id: github.com/ricardosilva86/outro-repositorio
+- id: github.com/ricardosilva86/outro-outro-repositorio
+```
+
+> Tem inúmeras formas de configurar seus repositórios, caso precise de algo a mais, tente a documentação oficial, que é ótima, [aqui](https://www.runatlantis.io/docs/server-side-repo-config.html).
+
+Basicamente aqui eu setei uma configuração global com `id: /.*/`. Todos os repositórios herdam essa configuração e caso você queira mudar algo, basta adicionar a mudança para o repositório específico.
+
