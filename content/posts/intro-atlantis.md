@@ -52,10 +52,10 @@ Então aqui vai uma listinha do que precisamos ter para fazer acontecer:
 
 Vou usar AWS nesse exemplo só porque é simples de começar e a free tier é bem generosa. Se você tem familiaridade com outro provedor de Cloud, pode seguir com ele.
 
-Faça login na sua conta da AWS, vá em **IAM** e crie um novo usuário, dê o nome de `atlantis`. Para as permissões, selecione apenas o que você quer que este usuário tenha de permissões, no nosso caso eu selecionei S3 Full Access, visto que o exemplo será bem simples e só vamos criar um bucket no S3. ![img.png](images/atlantis-intro-atlantis-user-aws.png)
-Agora volte ao IAM, clique em User, clique no usuário que acabamos de criar e crie uma Access Key: ![img.png](images/atlantis-intro-create-access-key-aws.png)
+Faça login na sua conta da AWS, vá em **IAM** e crie um novo usuário, dê o nome de `atlantis`. Para as permissões, selecione apenas o que você quer que este usuário tenha de permissões, no nosso caso eu selecionei S3 Full Access, visto que o exemplo será bem simples e só vamos criar um bucket no S3. ![img.png](https://raw.githubusercontent.com/ricardosilva86/personal-blog/refs/heads/main/content/posts/images/atlantis-intro-atlantis-user-aws.png)
+Agora volte ao IAM, clique em User, clique no usuário que acabamos de criar e crie uma Access Key: ![img.png](https://raw.githubusercontent.com/ricardosilva86/personal-blog/refs/heads/main/content/posts/images/atlantis-intro-create-access-key-aws.png)
 
-Selecione o tipo _Third-party service_, marque o checkbox de confirmação e clique Next. Será apresentado a ACCESS KEY e a SECRET KEY, salve esses dados pois você não poderá vê-los novamente.![img.png](images/atlantis-intro-select-access-key-type-aws.png)
+Selecione o tipo _Third-party service_, marque o checkbox de confirmação e clique Next. Será apresentado a ACCESS KEY e a SECRET KEY, salve esses dados pois você não poderá vê-los novamente.![img.png](https://raw.githubusercontent.com/ricardosilva86/personal-blog/refs/heads/main/content/posts/images/atlantis-intro-select-access-key-type-aws.png)
 
 > ⚠️ IMPORTANTE ⚠️: de posse dessas credenciais, qualquer pessoa pode criar recursos, apagar recursos, editar recursos e tudo o mais na sua conta. Guarde essa informação como um segredo/senha.
 ### Token do GitHub
@@ -316,17 +316,17 @@ Se os 3 checks funcionaram significa que temos tudo funcionando!
 Hora de testar se realmente está funcionando a integração com o GitHub 🥁🥁🥁
 
 Vamos fazer uma alteração no código do Github e criar um Pull Request. Assim que você alterar o código e enviar a nova _branch_ e criar o PR, você verá algo assim:
-![img.png](images/atlantis-intro-new-pr.png)
+![img.png](https://raw.githubusercontent.com/ricardosilva86/personal-blog/refs/heads/main/content/posts/images/atlantis-intro-new-pr.png)
 
 Digamos que eu fiquei feliz com o resultado do `plan` e quero aplicar, basta comentar `atlantis apply` e você verá o seguinte:
-![img.png](images/atlantis-intro-fail-to-apply.png)
+![img.png](https://raw.githubusercontent.com/ricardosilva86/personal-blog/refs/heads/main/content/posts/images/atlantis-intro-fail-to-apply.png)
 
 Deu ruim porque definimos que o código só pode ser aplicado caso o PR esteja `mergeable, undiverged, applied`, ou seja, precisa estar sem conflitos, estar à frente da _branch_ alvo (se aparecer `n commits behind` em algum lugar do seu PR, significa que está faltando commits que já foram para a _branch_  alvo/_target_ e não foram para o seu PR) e finalmente, precisa estar aprovado.
 
 > Se você está testando sozinho, remova o `approved` porque o GitHub não permite aprovação do PR pelo seu autor, a menos que você crie um ruleset que defina o Bypass para administradores.
 
 Pronto, se liga:
-![img.png](images/atlantis-intro-apply-successful.png)
+![img.png](https://raw.githubusercontent.com/ricardosilva86/personal-blog/refs/heads/main/content/posts/images/atlantis-intro-apply-successful.png)
 
 ```terminaloutput
 aws_s3_bucket.balde-de-lixo: Creating...
@@ -426,7 +426,7 @@ Infelizmente alguns recursos de configuração só estão disponíveis no lado d
 > Se você usa `terragrunt`, o processo será parecido, você precisa criar um image customizada com o binário do `terragrunt` e criar um fluxo customizado para executar o `terragrunt` ao invés do `terraform`.
 ### E aí, funcionou?
 
-![img_1.png](images/atlantis-intro-infracost-breakdown.png)
+![img_1.png](https://raw.githubusercontent.com/ricardosilva86/personal-blog/refs/heads/main/content/posts/images/atlantis-intro-infracost-breakdown.png)
 Aqui está o resultado apresentado pelo novo _workflow_ como forma de comentário no nosso Pull Request:
 ```terminaloutput
 aws_s3_bucket.balde-de-lixo: Refreshing state... [id=balde-de-lixo-do-plancton]
