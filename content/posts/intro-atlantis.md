@@ -358,8 +358,171 @@ Para demonstrar um _workflow_ customizado, vou usar o `infracost` como exemplo p
 
 ### Infracost
 
+O que é o Infracost:
+>O Infracost desloca os custos da nuvem para a esquerda e transforma o FinOps de reativo em proativo. Ele se integra ao fluxo de trabalho de engenharia (por exemplo, GitHub, Azure Repos) e mostra o impacto do custo das alterações no código antes da implantação — evitando erros dispendiosos.
+
+Ou seja, antes de aplicar e descobrir que vai ficar caro, o Infracost vai nos dizer "quanto vai custar essa brincadeira".
+
+Vamo lá então integrar o Atlantis com o Infracost num _workflow_ customizado. Primeiro precisamos adicionar o workflow no `repos.yaml`, dessa forma, ao final do arquivo adicione o seguinte conteúdo:
+
+```yaml
+workflows:
+  infracost:
+    plan:
+      steps:
+        - init
+        - plan
+        - run: infracost breakdown --path .
+```
+
+Em seguida, vamos gerar uma API Key no site do Infracost para podermos usar o CLI, siga esses passos [aqui](https://www.infracost.io/docs/) para conseguir a sua chave. Quando tiver essa chave, adicione a variável de ambiente `INFRACOST_API_KEY` ao nosso `docker-compose.yaml`.
+
+Vamos conhecer mais um recurso do Atlantis, o `atlantis.yaml` que é um arquivo de configuração do lado do repositório e não mais no lado do servidor.
+
+Crie o arquivo `atlantis.yaml` no nosso repositório com o seguinte conteúdo:
+```yaml
+version: 3
+projects:
+  - name: default
+    dir: .
+    workflow: infracost
+    autoplan:
+      when_modified: [ "*.tf", "*.tfvars" ]
+```
+E precisamos de mais uma mudança, agora precisamos do cli do `infracost` no nosso container para poder usarmos o comando, vamos alterar o nosso `docker-compose.yaml` e fazer build de uma image customizada que instala o `infracost` ao invés de usar a imagem oficial.
+
+Crie um `Dockerfile` com o seguinte conteúdo:
+```dockerfile
+FROM ghcr.io/runatlantis/atlantis:latest
+
+# Install dependencies and Infracost CLI
+USER root
+RUN apk update && \
+    apk add --no-cache curl && \
+    curl -fsSL https://raw.githubusercontent.com/infracost/infracost/master/scripts/install.sh | sh && \
+    rm -rf /var/cache/apk/*
+USER atlantis
+```
+Volte ao `docker-compose.yaml` e altere o seguinte:
+```yaml
+atlantis:
+-   image: ghcr.io/runatlantis/atlantis:latest
++   build: .
+```
+Ou seja, remove a linha que contém a `image` e substitua por `build`.
+
+Para recriar nossa _stack_ vamos rodar o seguinte comando:
+```shell
+docker compose down && docker compose up -d
+```
+Vai demorar um pouco mais para iniciar porque agora o Docker fará o build da imagem antes de iniciar o Atlantis.  
+
+A facilidade que o arquivo de configuração traz estando no lado do repositório é: 
+1. não é necessário reiniciar o Atlantis quando há uma alteração da configuração e
+2. você pode definir várias pastas no mesmo repositório contendo código de diferentes partes da sua infraestrutura e apenas criar a referência no `atlantis.yaml` apontando qual _workflow_ deve ser usado.
+
+Infelizmente alguns recursos de configuração só estão disponíveis no lado do servidor. Para mais informações, veja a documentação de cada um dos arquivos [aqui](https://www.runatlantis.io/docs/server-side-repo-config.html) e [aqui](https://www.runatlantis.io/docs/repo-level-atlantis-yaml.html).
+
+> Se você usa `terragrunt`, o processo será parecido, você precisa criar um image customizada com o binário do `terragrunt` e criar um fluxo customizado para executar o `terragrunt` ao invés do `terraform`.
+### E aí, funcionou?
+
+Aqui está o resultado apresentado pelo novo _workflow_ como forma de comentário no nosso Pull Request:
+```terminaloutput
+aws_s3_bucket.balde-de-lixo: Refreshing state... [id=balde-de-lixo-do-plancton]
+
+Terraform used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
++ create
+
+Terraform will perform the following actions:
+
+  # aws_s3_bucket.balde-de-lixo2 will be created
++ resource "aws_s3_bucket" "balde-de-lixo2" {
+      + acceleration_status         = (known after apply)
+      + acl                         = (known after apply)
+      + arn                         = (known after apply)
+      + bucket                      = "balde-de-lixo-do-plancton-2"
+      + bucket_domain_name          = (known after apply)
+      + bucket_prefix               = (known after apply)
+      + bucket_region               = (known after apply)
+      + bucket_regional_domain_name = (known after apply)
+      + force_destroy               = false
+      + hosted_zone_id              = (known after apply)
+      + id                          = (known after apply)
+      + object_lock_enabled         = (known after apply)
+      + policy                      = (known after apply)
+      + region                      = "eu-central-1"
+      + request_payer               = (known after apply)
+      + tags                        = {
+          + "Env"  = "dev"
+          + "Team" = "Infra"
+        }
+      + tags_all                    = {
+          + "Env"  = "dev"
+          + "Team" = "Infra"
+        }
+      + website_domain              = (known after apply)
+      + website_endpoint            = (known after apply)
+
+      + cors_rule (known after apply)
+
+      + grant (known after apply)
+
+      + lifecycle_rule (known after apply)
+
+      + logging (known after apply)
+
+      + object_lock_configuration (known after apply)
+
+      + replication_configuration (known after apply)
+
+      + server_side_encryption_configuration (known after apply)
+
+      + versioning (known after apply)
+
+      + website (known after apply)
+    }
+
+Plan: 1 to add, 0 to change, 0 to destroy.
 
 
+2025-09-16T20:16:01Z INFO Autodetected 1 Terraform project across 1 root module
+2025-09-16T20:16:01Z INFO Found Terraform project "main" at directory "." using Terraform var files "terraform.tfvars"
+Project: main
+
+
+ Name                                             Monthly Qty  Unit                    Monthly Cost   
+                                                                                                      
+ aws_s3_bucket.balde-de-lixo                                                                          
+ └─ Standard                                                                                          
+    ├─ Storage                              Monthly cost depends on usage: $0.0245 per GB             
+    ├─ PUT, COPY, POST, LIST requests       Monthly cost depends on usage: $0.0054 per 1k requests    
+    ├─ GET, SELECT, and all other requests  Monthly cost depends on usage: $0.00043 per 1k requests   
+    ├─ Select data scanned                  Monthly cost depends on usage: $0.00225 per GB            
+    └─ Select data returned                 Monthly cost depends on usage: $0.0008 per GB             
+                                                                                                      
+ aws_s3_bucket.balde-de-lixo2                                                                         
+ └─ Standard                                                                                          
+    ├─ Storage                              Monthly cost depends on usage: $0.0245 per GB             
+    ├─ PUT, COPY, POST, LIST requests       Monthly cost depends on usage: $0.0054 per 1k requests    
+    ├─ GET, SELECT, and all other requests  Monthly cost depends on usage: $0.00043 per 1k requests   
+    ├─ Select data scanned                  Monthly cost depends on usage: $0.00225 per GB            
+    └─ Select data returned                 Monthly cost depends on usage: $0.0008 per GB             
+                                                                                                      
+ OVERALL TOTAL                                                                               $0.00 
+
+*Usage costs can be estimated by updating Infracost Cloud settings, see docs for other options.
+
+──────────────────────────────────
+2 cloud resources were detected:
+∙ 2 were estimated
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━┳━━━━━━━━━━━━┓
+┃ Project                                            ┃ Baseline cost ┃ Usage cost* ┃ Total cost ┃
+┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━╋━━━━━━━━━━━━┫
+┃ main                                               ┃         $0.00 ┃           - ┃      $0.00 ┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┻━━━━━━━━━━━━━━━┻━━━━━━━━━━━━━┻━━━━━━━━━━━━┛
+```
 ## Conclusão
 Neste artigo, apresentei o Atlantis como uma solução GitOps acessível e poderosa para automatizar nossos workflows de Terraform, eliminando a necessidade de executar `terraform apply` manualmente da nossa máquina.  
 
