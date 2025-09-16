@@ -1,6 +1,6 @@
 +++
-date = '2025-09-04T13:40:42+02:00'
-draft = true
+date = '2025-09-16T22:44:42+02:00'
+draft = false
 title = 'Automatizando Terraform com GitOps: Um guia para iniciantes com Atlantis'
 +++
 
@@ -426,6 +426,7 @@ Infelizmente alguns recursos de configuração só estão disponíveis no lado d
 > Se você usa `terragrunt`, o processo será parecido, você precisa criar um image customizada com o binário do `terragrunt` e criar um fluxo customizado para executar o `terragrunt` ao invés do `terraform`.
 ### E aí, funcionou?
 
+![img_1.png](images/atlantis-intro-infracost-breakdown.png)
 Aqui está o resultado apresentado pelo novo _workflow_ como forma de comentário no nosso Pull Request:
 ```terminaloutput
 aws_s3_bucket.balde-de-lixo: Refreshing state... [id=balde-de-lixo-do-plancton]
