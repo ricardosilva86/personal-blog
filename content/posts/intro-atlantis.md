@@ -274,33 +274,40 @@ docker compose up -d
 ```terminaloutput
 WARN[0000] The "UID" variable is not set. Defaulting to a blank string. 
 [+] Running 24/24
- ✔ zrok Pulled                                                                                                                                                                    19.3s 
-   ✔ 7b061f511294 Pull complete                                                                                                                                                   10.5s 
-   ✔ 3d6607d3dbc4 Pull complete                                                                                                                                                   10.5s 
-   ✔ 6cff76b535d3 Pull complete                                                                                                                                                   13.1s 
-   ✔ b3d72ae26f8f Pull complete                                                                                                                                                   13.5s 
-   ✔ d5b4f1acfb29 Pull complete                                                                                                                                                   13.5s 
-   ✔ 77b5f4970fe8 Pull complete                                                                                                                                                   13.5s 
-   ✔ 9e3046e1ce9b Pull complete                                                                                                                                                   13.5s 
-   ✔ 4f4fb700ef54 Pull complete                                                                                                                                                   13.9s 
-   ✔ b9529084985f Pull complete                                                                                                                                                   16.4s 
-   ✔ c30168d90002 Pull complete                                                                                                                                                   16.4s 
-   ✔ eac112e77b9c Pull complete                                                                                                                                                   16.5s 
-   ✔ 95c29cd56481 Pull complete                                                                                                                                                   16.5s 
-   ✔ cd012eabab7e Pull complete                                                                                                                                                   17.5s 
- ✔ atlantis Pulled                                                                                                                                                                16.7s 
-   ✔ 6e771e15690e Pull complete                                                                                                                                                    6.5s 
-   ✔ 305ced8d2b86 Pull complete                                                                                                                                                    6.5s 
-   ✔ fc5cd065b9fe Pull complete                                                                                                                                                    6.9s 
-   ✔ e9bfac012337 Pull complete                                                                                                                                                   10.5s 
-   ✔ 2bea7a2ea3a3 Pull complete                                                                                                                                                   12.1s 
-   ✔ d47b004927cf Pull complete                                                                                                                                                   12.6s 
-   ✔ 2d95b90dee76 Pull complete                                                                                                                                                   12.9s 
-   ✔ 5032dfc784ba Pull complete                                                                                                                                                   12.9s 
-   ✔ b6b31555fe60 Pull complete                                                                                                                                                   15.3s 
+ ✔ zrok Pulled                                                       19.3s 
+   ✔ 7b061f511294 Pull complete                                      10.5s 
+   ✔ 3d6607d3dbc4 Pull complete                                      10.5s 
+   ✔ 6cff76b535d3 Pull complete                                      13.1s 
+   ✔ b3d72ae26f8f Pull complete                                      13.5s 
+   ✔ d5b4f1acfb29 Pull complete                                      13.5s 
+   ✔ 77b5f4970fe8 Pull complete                                      13.5s 
+   ✔ 9e3046e1ce9b Pull complete                                      13.5s 
+   ✔ 4f4fb700ef54 Pull complete                                      13.9s 
+   ✔ b9529084985f Pull complete                                      16.4s 
+   ✔ c30168d90002 Pull complete                                      16.4s 
+   ✔ eac112e77b9c Pull complete                                      16.5s 
+   ✔ 95c29cd56481 Pull complete                                      16.5s 
+   ✔ cd012eabab7e Pull complete                                      17.5s 
+ ✔ atlantis Pulled                                                   16.7s 
+   ✔ 6e771e15690e Pull complete                                       6.5s 
+   ✔ 305ced8d2b86 Pull complete                                       6.5s 
+   ✔ fc5cd065b9fe Pull complete                                       6.9s 
+   ✔ e9bfac012337 Pull complete                                      10.5s 
+   ✔ 2bea7a2ea3a3 Pull complete                                      12.1s 
+   ✔ d47b004927cf Pull complete                                      12.6s 
+   ✔ 2d95b90dee76 Pull complete                                      12.9s 
+   ✔ 5032dfc784ba Pull complete                                      12.9s 
+   ✔ b6b31555fe60 Pull complete                                      15.3s 
 [+] Running 3/3
- ✔ Network atlantis-intro_default       Created                                                                                                                                    0.1s 
- ✔ Container atlantis-intro-zrok-1      Started                                                                                                                                    1.7s 
- ✔ Container atlantis-intro-atlantis-1  Started                                                                                                                                    1.7s 
+ ✔ Network atlantis-intro_default       Created                       0.1s 
+ ✔ Container atlantis-intro-zrok-1      Started                       1.7s 
+ ✔ Container atlantis-intro-atlantis-1  Started                       1.7s 
 ```
 
+Vamos ver se realmente funcionou essa geringonça mágica: 
+1. abra seu navegador e acesse [localhost:4141](http://localhost:4141), se abrir a pagina do Atlantis, estamos indo bem. 
+2. abra o navegador e vá para a URL do `zrok`, a mesma página deve abrir e finalmente 
+3. abra as configurações do webhook e vá na aba **Recent Deliveries**, clique nos 3 pontinhos e selecione **Redeliver**, confirme que quer fazer o _redeliver_ clicando no botão **Yes,...**, espere alguns segundos e devemos ter agora um novo item com a tag _redelivery_ com um pequeno ✓ azul no lado esquerdo.
+
+Se os 3 checks funcionaram significa que temos tudo funcionando!
+> "Não contavam com a minha astúcia!"
