@@ -87,7 +87,6 @@ Agora vamos para o Docker Compose (se você não tem ideia do que é o Docker co
 
 Precisamos de um arquivo `docker-compose.yml` contendo tanto o Atlantis quanto o zrok, dessa forma teremos o que é necessário para executar o Atlantis e expô-lo à internet para que o GitHub possa acessar o endpoint de eventos do Atlantis -- é assim que ele vai saber que é hora de rodar o plan e apply.  
 
-```
 Agora crie o arquivo docker-compose.yaml com o seguinte conteúdo:
 
 ```yaml
