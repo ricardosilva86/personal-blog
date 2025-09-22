@@ -51,10 +51,10 @@ So here's a little list of what we need to make it happen:
 
 I'll use AWS in this example just because it's simple to start and the free tier is quite generous. If you're familiar with another Cloud provider, you can continue with it.
 
-Log into your AWS account, go to **IAM** and create a new user, name it `atlantis`. For permissions, select only what you want this user to have permissions for, in our case I selected S3 Full Access, since the example will be quite simple, and we'll only create an S3 bucket. ![img.png](images/atlantis-intro-atlantis-user-aws.png)
-Now go back to IAM, click on User, click on the user we just created and create an Access Key: ![img.png](images/atlantis-intro-create-access-key-aws.png)
+Log into your AWS account, go to **IAM** and create a new user, name it `atlantis`. For permissions, select only what you want this user to have permissions for, in our case I selected S3 Full Access, since the example will be quite simple, and we'll only create an S3 bucket. ![img.png](https://raw.githubusercontent.com/ricardosilva86/personal-blog/refs/heads/main/content/posts/images/atlantis-intro-atlantis-user-aws.png)
+Now go back to IAM, click on User, click on the user we just created and create an Access Key: ![img.png](https://raw.githubusercontent.com/ricardosilva86/personal-blog/refs/heads/main/content/posts/images/atlantis-intro-create-access-key-aws.png)
 
-Select the _Third-party service_ type, check the confirmation checkbox and click Next. You'll be presented with the ACCESS KEY and SECRET KEY, save this data as you won't be able to see it again.![img.png](images/atlantis-intro-select-access-key-type-aws.png)
+Select the _Third-party service_ type, check the confirmation checkbox and click Next. You'll be presented with the ACCESS KEY and SECRET KEY, save this data as you won't be able to see it again.![img.png](https://raw.githubusercontent.com/ricardosilva86/personal-blog/refs/heads/main/content/posts/images/atlantis-intro-select-access-key-type-aws.png)
 
 > ⚠️ IMPORTANT ⚠️: with these credentials, anyone can create resources, delete resources, edit resources and everything else in your account. Keep this information like a secret/password.
 
