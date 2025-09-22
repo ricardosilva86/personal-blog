@@ -2,7 +2,7 @@
 date = '2025-09-16T22:44:42+02:00'
 draft = false
 title = "Automating Terraform with GitOps: A beginner's guide with Atlantis"
-tags = ['Terraform', 'DevOps', 'GitOps', 'Atlantis', 'GitHub', 'en']
+tags = ['Terraform', 'DevOps', 'GitOps', 'Atlantis', 'GitHub', 'English']
 +++
 
 While many of us have already gotten rid of running `terraform apply` locally, unfortunately others still haven't found a way to escape this burden.
@@ -86,7 +86,6 @@ Now let's go to Docker Compose (if you have no idea what Docker compose is, then
 
 We need a `docker-compose.yml` file containing both Atlantis and zrok, this way we'll have what's necessary to run Atlantis and expose it to the internet so GitHub can access the Atlantis events endpoint -- this is how it will know it's time to run plan and apply.
 
-```
 Now create the docker-compose.yaml file with the following content:
 
 ```yaml
@@ -133,8 +132,6 @@ Obviously we need to replace the important values here with our own:
 - `AWS_ACCESS_KEY_ID`: here goes the AWS key ID for the `atlantis` user we created in the first step.
 - `AWS_SECRET_ACCESS_KEY`: obviously here goes the secret key.
 
-> 🚀 "Well, well, don't get irritated", I know you want to run a `docker compose up`, but we still need to take care of a few more details, but first, let's recap what we've done so far.
-
 #### Explaining what we've done so far:
 1. We created a user in AWS, attached a _policy_ to this user to be able to perform the actions we need, in our example here, we'll only have access to S3. We also created the Access Key and stored the credentials securely -- I saved them in my 1Password ;)
 2. We also created our **Personal access token** on GitHub so that Atlantis can access the repository containing the Terraform code it will automate.
@@ -142,8 +139,6 @@ Obviously we need to replace the important values here with our own:
 4. We created our `docker-compose.yaml` file to be able to spin up the Atlantis service.
 
 Up to this point we have almost everything in place, now we just need a few more details.
-
-> "Follow me, good ones".
 
 ## Configuring Atlantis
 
@@ -213,7 +208,7 @@ tags = {
 }
 ```
 
-Very simple code to create an S3 bucket, using another bucket as backend for our state.
+Basic code to create an S3 bucket, using another bucket as backend for our state.
 
 Now we have 2 important steps to configure Atlantis: 1. the Atlantis configuration file and 2. the GitHub webhook to call Atlantis.
 
@@ -258,8 +253,6 @@ Access your repository on GitHub and go to **Settings**, in the sidebar click on
 > It's also possible to install the webhook at the organization level, which speeds up the process of configuring these webhooks, but it's also necessary to disable it for repositories that are not infrastructure code.
 
 Finally, let's get this thing running! But first, let's recap what we've done so far:
-
-> "Well, well, don't get irritated... 🤷‍♂️"
 
 #### Explaining what we've done so far pt.2:
 1. We created a repository on GitHub and created very elementary Terraform code;
@@ -311,7 +304,6 @@ Let's see if this magical contraption really worked:
 3. open the webhook settings and go to the **Recent Deliveries** tab, click on the 3 dots and select **Redeliver**, confirm that you want to do the _redelivery_ by clicking the **Yes,...** button, wait a few seconds, and we should now have a new item with the _redelivery_ tag with a small blue ✓ on the left side.
 
 If all 3 checks worked it means we have everything working!
-> "They didn't count on my cunning!"
 
 Time to test if the GitHub integration is really working 🥁🥁🥁
 
@@ -421,7 +413,7 @@ The convenience that the configuration file brings being on the repository side 
 1. it's not necessary to restart Atlantis when there's a configuration change and
 2. you can define multiple folders in the same repository containing code from different parts of your infrastructure and just create the reference in `atlantis.yaml` pointing to which _workflow_ should be used.
 
-Unfortunately some configuration features are only available on the server side. For more information, see the documentation for each of the files [here](https://www.runatlantis.io/docs/server-side-repo-config.html) and [here](https://www.runatlantis.io/docs/repo-level-atlantis-yaml.html).
+Unfortunately, some configuration features are only available on the server side. For more information, see the documentation for each of the files [here](https://www.runatlantis.io/docs/server-side-repo-config.html) and [here](https://www.runatlantis.io/docs/repo-level-atlantis-yaml.html).
 
 > If you use `terragrunt`, the process will be similar, you need to create a custom image with the `terragrunt` binary and create a custom flow to run `terragrunt` instead of `terraform`.
 
