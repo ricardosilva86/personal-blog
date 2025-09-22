@@ -527,3 +527,5 @@ I guided you through the installation and configuration process using Docker Com
 - Configuring the webhook in the repository so that Atlantis is notified about new Pull Requests.
 
 Finally, we demonstrated the complete flow in action. We saw how a Pull Request with infrastructure code changes triggered an automatic `terraform plan` as a comment and, after approval, a simple `atlantis apply` was enough to execute the changes, validating our entire setup with the creation of an S3 bucket.
+
+PS: here you are an article from a brilliant guy, Bruno with a smart way to deploy Atlantins on [Google Cloud Run](https://www.runatlantis.io/blog/2025/atlantis-on-google-cloud-run)

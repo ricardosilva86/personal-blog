@@ -533,3 +533,5 @@ Eu guiei você através do processo de instalação e configuração usando Dock
 - Configurar o webhook no repositório para que o Atlantis seja notificado sobre novos Pull Requests.
 
 Finalmente, demonstramos o fluxo completo em ação. Vimos como um Pull Request com alterações no código de infraestrutura acionou um `terraform plan` automático como um comentário e, após a aprovação, um simples `atlantis apply` foi o suficiente para executar as mudanças, validando todo o nosso setup com a criação de um bucket S3.
+
+PS: aqui está um artigo de um cara sensacional, o Bruno, que descreve como rodar o Atlantins no [Google Cloud Run](https://www.runatlantis.io/blog/2025/atlantis-on-google-cloud-run). Vale a pena conferir!
