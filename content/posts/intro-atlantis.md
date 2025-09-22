@@ -2,6 +2,7 @@
 date = '2025-09-16T22:44:42+02:00'
 draft = false
 title = 'Automatizando Terraform com GitOps: Um guia para iniciantes com Atlantis'
+tags = ['atlantis', 'pt-br', 'automação', 'terraform', 'github']
 +++
 
 Embora muitos de nós já tenhamos nos livrado de rodar `terraform apply` localmente, infelizmente outros ainda não encontraram uma forma de se livrar desse carma. 
