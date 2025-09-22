@@ -1,8 +1,8 @@
 +++
 date = '2025-09-16T22:44:42+02:00'
 draft = false
-title = 'Automating Terraform with GitOps: A beginner\'s guide with Atlantis'
-tags = ['atlantis', 'en', 'automation', 'terraform', 'github']
+title = "Automating Terraform with GitOps: A beginner's guide with Atlantis"
+tags = ['Terraform', 'DevOps', 'GitOps', 'Atlantis', 'GitHub', 'en']
 +++
 
 While many of us have already gotten rid of running `terraform apply` locally, unfortunately others still haven't found a way to escape this burden.
